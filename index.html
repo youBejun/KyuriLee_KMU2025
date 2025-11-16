@@ -4,35 +4,55 @@
   <meta charset="UTF-8" />
   <title>온라인 전시 – 관상어 Ornamental Fish</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="이규리 작가의 인쇄물 작업 &lt;관상어 Ornamental Fish&gt; 온라인 전시. 문학적 내러티브와 그래픽 이미지를 결합한 복합 인쇄 작업으로, 애도와 치유의 여정을 다룹니다."
+  />
+  <!-- 폰트 -->
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600&display=swap"
+  />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <main class="page">
     <header class="header">
       <!-- 나중에 images/cover.jpg 파일을 올리면 이 이미지가 보입니다 -->
-      <img src="images/cover.jpg" alt="관상어 Ornamental Fish 표지" class="cover-image" />
-      <h1 class="book-title">
-        관상어
-        <span style="font-size:0.9em; color:#0f766e; margin-left:4px;">Ornamental Fish</span>
-      </h1>
-      <p class="book-subtitle">너를 품으며 도달하는 애도와 치유에 대하여</p>
-      <p class="book-meta">
-        이규리 | Kyuri Lee<br />
-        2025 · Printed work · Story, Graphic Art
-      </p>
+      <div class="cover-wrapper">
+        <img
+          src="images/cover.jpg"
+          alt="관상어 Ornamental Fish 표지"
+          class="cover-image"
+        />
+      </div>
+
+      <div class="header-text">
+        <h1 class="book-title">
+          관상어
+          <span class="book-title-en">Ornamental Fish</span>
+        </h1>
+        <p class="book-subtitle">
+          너를 품으며 도달하는 애도와 치유에 대하여
+        </p>
+        <p class="book-meta">
+          이규리 | Kyuri Lee<br />
+          2025 · Printed work · Story, Graphic Art
+        </p>
+      </div>
     </header>
 
     <section class="section">
       <h2 class="section-title">전시 소개</h2>
 
       <!-- 한국어 소개 -->
-      <p><strong>관상어 (Ornamental Fish)</strong></p>
-      <p>
+      <p class="paragraph-compact"><strong>관상어 (Ornamental Fish)</strong></p>
+      <p class="paragraph-compact">
         이규리 | Kyuri Lee<br />
         2025<br />
         인쇄물 | 스토리, 그래픽 아트
       </p>
-      <p>
+      <p class="paragraph-compact">
         156 × 250 mm, 128p, 누드 사철, 4도 인쇄
       </p>
       <p>
@@ -40,41 +60,102 @@
         너를 품으며 도달하는 애도와 치유에 대하여.
       </p>
 
-      <!-- 구분선 느낌 -->
-      <p style="margin: 18px 0 10px; font-size:0.85rem; color:#9ca3af;">
-        —————————————————————————————————
-      </p>
+      <!-- 구분선 -->
+      <p class="section-divider">—————————————————————————————————</p>
 
       <!-- 영어 소개 -->
-      <p><strong>Ornamental Fish</strong></p>
-      <p>
+      <p class="paragraph-compact"><strong>Ornamental Fish</strong></p>
+      <p class="paragraph-compact">
         Kyuri Lee<br />
         2025<br />
         Printed work | Story, Graphic Art
       </p>
-      <p>
+      <p class="paragraph-compact">
         156 × 250 mm, 128 pages, sewn binding (nude binding), full-color (4C) printing
       </p>
       <p>
         A hybrid printed work combining literary narrative and graphic imagery.<br />
         An exploration of grief and healing – through the act of embracing you.
       </p>
+
+      <!-- 기획 의도 / Concept -->
+      <p class="section-divider">—————————————————————————————————</p>
+
+      <section class="section">
+        <h2 class="section-title">기획 의도</h2>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+          imperdiet, odio sed porta malesuada, sem risus placerat lorem, sit amet
+          euismod erat odio a lorem. Suspendisse potenti.
+        </p>
+
+        <p>
+          Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+          ac turpis egestas. Sed porta, elit at ullamcorper interdum, neque lorem
+          pharetra lacus, ac dictum augue lorem non est. Donec aliquet sapien ac
+          pellentesque pretium.
+        </p>
+
+        <p>
+          Vivamus eget sollicitudin nisl. Ut in urna vitae orci ultricies aliquet vel
+          quis elit. Maecenas sit amet risus cursus, dapibus elit eu, porttitor nunc.
+        </p>
+      </section>
     </section>
 
-    <section class="section">
-      <h2 class="section-title">목차</h2>
-      <ol class="toc-list">
-        <li><a href="chapter1.html">1장. 남월</a></li>
-        <li><a href="chapter2.html">2장. 윤</a></li>
-        <li><a href="chapter3.html">3장. 란주</a></li>
-        <li><a href="chapter4.html">4장. 낙찬</a></li>
-        <li><a href="chapter5.html">5장. 태양과 물고기</a></li>
-      </ol>
-    </section>
+    <!-- 목차 대신 탭 메뉴 -->
+    <div class="tab-menu">
+      <button class="tab-btn active" data-tab="artworks">Artworks</button>
+      <button class="tab-btn" data-tab="story">Story</button>
+      <button class="tab-btn" data-tab="exhibition">Exhibition</button>
+    </div>
+
+    <div class="tab-content">
+      <div id="artworks" class="tab-panel active">
+        <p>
+          작품 이미지, 그래픽 요소, 비하인드 컷 등을 소개하는 영역입니다.
+          이후 실제 작업 이미지로 교체해 주세요.
+        </p>
+      </div>
+
+      <div id="story" class="tab-panel">
+        <p>
+          작품 속 서사와 인물, 장에 대한 설명을 정리할 수 있는 공간입니다.
+          텍스트나 인용문, 작가의 메모 등을 배치할 수 있습니다.
+        </p>
+      </div>
+
+      <div id="exhibition" class="tab-panel">
+        <p>
+          전시 정보, 설치 뷰, 제작 과정 사진 등을 담을 수 있는 영역입니다.
+          오프라인 전시가 있다면 장소, 기간 등의 정보도 함께 적어 주세요.
+        </p>
+      </div>
+    </div>
 
     <footer class="footer">
       <p>© 2025 Kyuri Lee. All rights reserved.</p>
     </footer>
   </main>
+
+  <script>
+    // 탭 전환 스크립트
+    const tabButtons = document.querySelectorAll(".tab-btn");
+    const tabPanels = document.querySelectorAll(".tab-panel");
+
+    tabButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const target = btn.dataset.tab;
+
+        tabButtons.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        tabPanels.forEach((panel) => {
+          panel.classList.toggle("active", panel.id === target);
+        });
+      });
+    });
+  </script>
 </body>
 </html>
