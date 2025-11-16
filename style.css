@@ -1,0 +1,241 @@
+/* 전체 기본값 – 모바일 최적화 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  line-height: 1.7;
+  color: #0b1120; /* 아주 짙은 남색 */
+  background: radial-gradient(circle at top, #0f172a 0, #020617 55%);
+}
+
+/* 가운데 흰 카드 */
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 16px 16px 80px;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.45);
+  border-radius: 18px 18px 0 0;
+  border-top: 4px solid #06b6d4; /* 청록색 포인트 */
+}
+
+/* 상단 헤더 / 표지 */
+.header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.cover-image {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 18px;
+  margin: 0 auto 18px;
+  display: block;
+  box-shadow: 0 10px 30px rgba(8, 47, 73, 0.5);
+}
+
+.book-title {
+  font-size: 1.7rem;
+  margin: 0 0 6px;
+  letter-spacing: 0.04em;
+}
+
+.book-subtitle {
+  margin: 0 0 10px;
+  color: #0f766e; /* 딥 청록 */
+  font-size: 0.95rem;
+}
+
+.book-meta {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* 공통 섹션 */
+.section {
+  margin: 24px 0;
+}
+
+.section-title {
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+  color: #0f172a;
+}
+
+.section p {
+  margin: 8px 0;
+}
+
+/* 얇은 청록색 구분선 */
+.section + .section {
+  border-top: 1px dashed rgba(45, 212, 191, 0.6);
+  padding-top: 20px;
+}
+
+/* 목차 */
+.toc-list {
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.toc-list li {
+  margin: 6px 0;
+}
+
+.toc-list a {
+  color: #0369a1; /* 파란색 계열 */
+  text-decoration: none;
+}
+
+.toc-list a:hover {
+  color: #0ea5e9;
+  text-decoration: underline;
+}
+
+/* 상단 바 (챕터 페이지) */
+.top-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+  color: #0f172a;
+}
+
+.top-link {
+  text-decoration: none;
+  color: #0ea5e9;
+}
+
+.top-link:hover {
+  text-decoration: underline;
+}
+
+.top-chapter {
+  color: #6b7280;
+}
+
+/* 챕터 타이틀 */
+.chapter {
+  margin-top: 8px;
+}
+
+.chapter-title {
+  font-size: 1.35rem;
+  margin: 0 0 6px;
+  color: #0f172a;
+}
+
+.chapter-meta {
+  margin: 0 0 16px;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* 개별 페이지 블록 */
+.page-block {
+  padding: 16px 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.page-block:first-of-type {
+  border-top: none;
+}
+
+.page-number {
+  font-size: 0.8rem;
+  color: #0ea5e9;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* 삽화 */
+.illust {
+  margin: 12px 0;
+  text-align: center;
+}
+
+.illust img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto 6px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.35);
+}
+
+.illust figcaption {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+/* 하단 네비 – 모바일에서 손가락으로 누르기 편하게 */
+.chapter-nav {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  padding-top: 12px;
+  margin-top: 28px;
+  background: linear-gradient(to top, #ffffff, rgba(255, 255, 255, 0.96));
+}
+
+.nav-btn {
+  flex: 1;
+  text-align: center;
+  padding: 10px 12px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  border: 1px solid #bae6fd;
+  transition: background 0.15s ease, color 0.15s ease,
+    transform 0.08s ease;
+}
+
+.nav-btn.primary {
+  background: linear-gradient(135deg, #0ea5e9, #06b6d4);
+  color: #f9fafb;
+  border-color: transparent;
+}
+
+.nav-btn.secondary {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.nav-btn:active {
+  transform: translateY(1px);
+}
+
+/* 푸터 */
+.footer {
+  margin-top: 32px;
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
+  font-size: 0.8rem;
+  color: #9ca3af;
+  text-align: center;
+}
+
+/* 아이패드/PC에서 살짝 더 여백 */
+@media (min-width: 900px) {
+  .page {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    border-radius: 24px;
+    padding: 24px 32px 96px;
+  }
+}
