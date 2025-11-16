@@ -5,9 +5,7 @@
   <title>4장. 낙찬 – 관상어 Ornamental Fish</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600&display=swap" />
-
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -30,21 +28,29 @@
     </article>
 
     <nav class="chapter-nav">
-      <a href="chapter3.html" class="nav-btn ghost">← 3장</a>
-      <button class="nav-btn secondary" id="prev-btn">← 이전 페이지</button>
-      <button class="nav-btn primary" id="next-btn">다음 페이지 →</button>
+      <div class="chapter-nav-inner">
+        <a href="chapter3.html" class="nav-btn ghost">← 3장</a>
+        <button class="nav-btn page-btn" id="prev-btn">← 이전 페이지</button>
+        <button class="nav-btn page-btn" id="next-btn">다음 페이지 →</button>
+      </div>
     </nav>
   </main>
 
   <script>
     const startPage = 53;
     const endPage = 74;
+    const nextChapterUrl = "chapter5.html";
+
     let currentPage = startPage;
 
     const imgEl = document.getElementById("page-image");
     const numEl = document.getElementById("page-number");
     const prevBtn = document.getElementById("prev-btn");
     const nextBtn = document.getElementById("next-btn");
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
 
     function updatePage() {
       const pageStr = String(currentPage).padStart(3, "0");
@@ -53,13 +59,21 @@
       numEl.textContent = `Page ${currentPage}`;
 
       prevBtn.disabled = currentPage === startPage;
-      nextBtn.disabled = currentPage === endPage;
+
+      if (currentPage === endPage) {
+        nextBtn.textContent = "다음 장으로 →";
+        nextBtn.classList.add("next-chapter");
+      } else {
+        nextBtn.textContent = "다음 페이지 →";
+        nextBtn.classList.remove("next-chapter");
+      }
     }
 
     prevBtn.addEventListener("click", () => {
       if (currentPage > startPage) {
         currentPage--;
         updatePage();
+        scrollToTop();
       }
     });
 
@@ -67,6 +81,9 @@
       if (currentPage < endPage) {
         currentPage++;
         updatePage();
+        scrollToTop();
+      } else {
+        window.location.href = nextChapterUrl;
       }
     });
 
