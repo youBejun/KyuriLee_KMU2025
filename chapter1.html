@@ -4,6 +4,11 @@
   <meta charset="UTF-8" />
   <title>1장. 남월 – 관상어 Ornamental Fish</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- 폰트 (Inter + Noto Serif KR) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600&display=swap" />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -17,43 +22,8 @@
       <h1 class="chapter-title">1장. 남월</h1>
       <p class="chapter-meta">관상어 Ornamental Fish · Kyuri Lee</p>
 
-      <!-- Page 1 -->
-      <section class="page-block">
-        <p class="page-number">Page 1</p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-          a odio id metus rutrum dignissim. Curabitur sed semper felis. Nulla
-          facilisi. Sed accumsan eget mauris sed aliquam. Integer id sem
-          bibendum, vulputate justo id, euismod diam.
-        </p>
-        <p>
-          Suspendisse potenti. Donec ullamcorper tortor non mauris molestie
-          posuere. Aenean ac ipsum ac ipsum rhoncus congue. In hac habitasse
-          platea dictumst. Nam rhoncus tellus odio, at ultrices erat
-          tristique id.
-        </p>
-        <figure class="illust">
-          <img src="images/chapter1/p01.jpg" alt="1장 남월 관련 삽화" />
-          <figcaption>남월의 첫 장면을 담은 청록빛 이미지.</figcaption>
-        </figure>
-      </section>
-
-      <!-- Page 2 -->
-      <section class="page-block">
-        <p class="page-number">Page 2</p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-          pharetra, sem in placerat suscipit, nibh risus fermentum mi, ut
-          rhoncus felis nunc eu sapien. Nulla pretium ultricies purus, quis
-          ultricies odio vehicula id.
-        </p>
-        <p>
-          Mauris nec cursus purus. Nam bibendum, elit at efficitur vulputate,
-          nisl urna hendrerit orci, vitae feugiat magna lacus eu leo. Cras
-          vestibulum ac nibh quis hendrerit. Integer viverra leo arcu, sed
-          dictum ex finibus a.
-        </p>
-      </section>
+      <!-- 여기에 JS가 페이지 이미지를 자동으로 채워 넣음 -->
+      <div id="chapter-pages"></div>
     </article>
 
     <nav class="chapter-nav">
@@ -61,5 +31,35 @@
       <a href="chapter2.html" class="nav-btn primary">다음: 2장 윤 →</a>
     </nav>
   </main>
+
+  <script>
+    // 1장: 1~17페이지
+    const startPage = 1;
+    const endPage = 17;
+
+    const container = document.getElementById("chapter-pages");
+
+    for (let page = startPage; page <= endPage; page++) {
+      const section = document.createElement("section");
+      section.className = "page-block";
+
+      const pageNum = document.createElement("p");
+      pageNum.className = "page-number";
+      pageNum.textContent = `Page ${page}`;
+
+      const figure = document.createElement("figure");
+      figure.className = "illust";
+
+      const img = document.createElement("img");
+      const pageStr = String(page).padStart(3, "0"); // 1 → 001
+      img.src = `images/pages/p${pageStr}.jpg`;
+      img.alt = `관상어 1장 남월 - ${page}쪽`;
+
+      figure.appendChild(img);
+      section.appendChild(pageNum);
+      section.appendChild(figure);
+      container.appendChild(section);
+    }
+  </script>
 </body>
 </html>
