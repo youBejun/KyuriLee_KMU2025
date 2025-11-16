@@ -4,6 +4,9 @@
   <meta charset="UTF-8" />
   <title>5장. 태양과 물고기 – 관상어 Ornamental Fish</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600&display=swap" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -16,42 +19,7 @@
     <article class="chapter">
       <h1 class="chapter-title">5장. 태양과 물고기</h1>
       <p class="chapter-meta">관상어 Ornamental Fish · Kyuri Lee</p>
-
-      <!-- Page 1 -->
-      <section class="page-block">
-        <p class="page-number">Page 1</p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel
-          nisi fermentum, rutrum purus id, sollicitudin velit. Integer
-          facilisis, sem sit amet ultrices vulputate, augue lectus faucibus
-          ipsum, et mattis eros elit non ligula.
-        </p>
-        <p>
-          Mauris faucibus, odio quis fermentum fermentum, sem arcu malesuada
-          quam, in iaculis neque justo eget libero. Nulla sit amet aliquet
-          magna. Cras ultrices lacus eget sagittis iaculis.
-        </p>
-        <figure class="illust">
-          <img src="images/chapter5/p01.jpg" alt="5장 태양과 물고기 관련 삽화" />
-          <figcaption>태양과 물고기가 마지막으로 만나는 장면.</figcaption>
-        </figure>
-      </section>
-
-      <!-- Page 2 -->
-      <section class="page-block">
-        <p class="page-number">Page 2</p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-          blandit eros nec sem convallis condimentum. Nunc convallis mi nec
-          aliquet accumsan. Curabitur pulvinar, erat id rhoncus imperdiet,
-          magna ipsum ullamcorper quam, eget accumsan quam purus sed sem.
-        </p>
-        <p>
-          Sed at urna sed metus finibus sodales. Sed at pharetra mi. Nam in
-          ante nec neque suscipit sagittis. Mauris tempor massa quis lectus
-          fermentum, at dictum odio fermentum.
-        </p>
-      </section>
+      <div id="chapter-pages"></div>
     </article>
 
     <nav class="chapter-nav">
@@ -59,5 +27,35 @@
       <a href="index.html" class="nav-btn primary">목차로 돌아가기</a>
     </nav>
   </main>
+
+  <script>
+    // 5장: 75~79페이지
+    const startPage = 75;
+    const endPage = 79;
+
+    const container = document.getElementById("chapter-pages");
+
+    for (let page = startPage; page <= endPage; page++) {
+      const section = document.createElement("section");
+      section.className = "page-block";
+
+      const pageNum = document.createElement("p");
+      pageNum.className = "page-number";
+      pageNum.textContent = `Page ${page}`;
+
+      const figure = document.createElement("figure");
+      figure.className = "illust";
+
+      const img = document.createElement("img");
+      const pageStr = String(page).padStart(3, "0");
+      img.src = `images/pages/p${pageStr}.jpg`;
+      img.alt = `관상어 5장 태양과 물고기 - ${page}쪽`;
+
+      figure.appendChild(img);
+      section.appendChild(pageNum);
+      section.appendChild(figure);
+      container.appendChild(section);
+    }
+  </script>
 </body>
 </html>
