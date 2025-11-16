@@ -23,7 +23,7 @@
   /* LAYOUT */
   --page-max-width: 760px;
   --page-padding-mobile: 18px;
-  --page-padding-desktop: 28px 40px 100px;
+  --page-padding-desktop: 28px 40px 96px;
   --page-radius: 20px;
   --line-height-base: 1.75;
 }
@@ -66,16 +66,14 @@ body {
 
   border-radius: var(--page-radius) var(--page-radius) 0 0;
 
-  /* 테두리: 종이 느낌 */
+  /* 테두리 & 그림자 */
   border: 1px solid #e5e7eb;
   border-top: 4px solid var(--color-border-top);
-
-  /* 그림자: 더 종이 느낌에 맞춰 조정 */
   box-shadow: 0 14px 32px rgba(15, 23, 42, 0.35);
 }
 
 /* =========================
-   HEADER / COVER IMAGE
+   HEADER (index용)
    ========================= */
 .header {
   text-align: center;
@@ -112,7 +110,7 @@ body {
 }
 
 /* =========================
-   SECTIONS
+   SECTIONS (index)
    ========================= */
 .section {
   margin: 24px 0;
@@ -152,7 +150,7 @@ body {
   align-items: center;
   gap: 8px;
   font-size: 0.9rem;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
   color: #0f172a;
 }
 
@@ -186,47 +184,38 @@ body {
 }
 
 /* =========================
-   PAGE BLOCKS
+   E-BOOK PAGE VIEW
    ========================= */
 .page-block {
-  padding: 16px 0;
-  border-top: 1px solid #d7dde4;
-}
-
-.page-block:first-of-type {
-  border-top: none;
+  margin-top: 10px;
 }
 
 .page-number {
   font-size: 0.8rem;
   color: var(--color-accent);
   margin: 0 0 8px;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
 }
 
-/* =========================
-   ILLUSTRATIONS
-   ========================= */
-.illust {
-  margin: 14px 0;
-  text-align: center;
+/* 한 장을 감싸는 페이지 프레임 */
+.page-frame {
+  background: #f9fafb;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  padding: 12px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.25);
 }
 
-.illust img {
-  max-width: 100%;
+/* 프레임 안의 이미지 */
+.page-frame img {
+  display: block;
+  width: 100%;
   height: auto;
-  border-radius: 12px;
-  margin: 0 auto 10px;
-  box-shadow: 0 12px 28px rgba(0, 30, 60, 0.32);
-}
-
-.illust figcaption {
-  font-size: 0.8rem;
-  color: var(--color-text-muted);
+  border-radius: 8px;
 }
 
 /* =========================
-   NAVIGATION (이전/다음 챕터)
+   NAVIGATION (이전/다음 페이지)
    ========================= */
 .chapter-nav {
   position: sticky;
@@ -234,33 +223,58 @@ body {
   display: flex;
   gap: 8px;
   justify-content: space-between;
-  padding-top: 12px;
-  margin-top: 32px;
-  background: linear-gradient(to top, var(--color-bg-page), rgba(245, 250, 255, 0.9));
+  padding-top: 16px;
+  margin-top: 28px;
+  background: linear-gradient(to top, var(--color-bg-page), rgba(245, 250, 255, 0.96));
 }
 
 .nav-btn {
   flex: 1;
   text-align: center;
-  padding: 11px 14px;
+  padding: 11px 10px;
   border-radius: 999px;
   text-decoration: none;
-  font-size: 0.96rem;
-  transition: 0.2s ease;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.18s ease;
+  font-family: var(--font-family-base);
 }
 
+/* 링크와 버튼 둘 다 이 클래스를 쓰므로 reset */
+.nav-btn:disabled {
+  cursor: default;
+}
+
+/* 버튼 스타일 */
 .nav-btn.primary {
   background: var(--color-accent);
   color: white;
 }
 
 .nav-btn.secondary {
-  background: #e8f4ff;
+  background: #e5f0ff;
   color: #0a1a2f;
 }
 
-.nav-btn:hover {
+.nav-btn.ghost {
+  background: transparent;
+  color: var(--color-text-muted);
+  border: 1px solid rgba(148, 163, 184, 0.5);
+}
+
+/* hover / active */
+.nav-btn:hover:not(:disabled) {
   opacity: 0.93;
+}
+
+.nav-btn:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+/* disabled */
+.nav-btn:disabled {
+  opacity: 0.45;
 }
 
 /* =========================
@@ -284,5 +298,9 @@ body {
     margin-bottom: 32px;
     padding: var(--page-padding-desktop);
     border-radius: 26px;
+  }
+
+  .chapter-nav {
+    gap: 10px;
   }
 }
