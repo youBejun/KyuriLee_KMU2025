@@ -361,7 +361,7 @@ body {
   border-radius: 999px;
   border: none;
   background: rgba(15, 23, 42, 0.28);
-  color: #f9fafb;
+  color: rgba(249, 250, 251, 0.5); /* 50% 투명도 */
   display: flex;
   align-items: center;
   justify-content: center;
