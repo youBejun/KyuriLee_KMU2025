@@ -48,7 +48,7 @@ An exploration of grief and healing – through the act of embracing you.
 이규리 | Kyuri Lee
 물고기 밥주고, 그림 그리고, 글쓰는 사람
 
-cisternstill@gmail.com
+e-mail: cisternstill@gmail.com
 insta: @cisternstil
 
 초판 1쇄 발행.
