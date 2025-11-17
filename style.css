@@ -3,7 +3,7 @@
    ========================= */
 :root {
   --color-bg-body: radial-gradient(circle at top, #0b1120 0%, #020617 50%, #020617 100%);
-  --color-bg-page: #ffffff;
+  --color-bg-page: #ffffff; /* 전체 배경 흰색 */
   --color-border-page: #e5e5ea;
   --color-text-main: #111827;
   --color-text-muted: #6b7280;
@@ -142,7 +142,7 @@ body {
 }
 
 /* =========================
-   TAB MENU (TEXT NAV)
+   TAB MENU 
    ========================= */
 .tab-menu {
   display: flex;
@@ -166,10 +166,6 @@ body {
 .tab-btn.active {
   color: #020617;
   border-bottom-color: var(--color-accent);
-}
-
-.tab-content {
-  margin-bottom: 12px;
 }
 
 .tab-panel {
@@ -203,117 +199,54 @@ body {
 }
 
 /* =========================
-   ARTWORKS TAB LAYOUT
+   ARTWORKS LIST
    ========================= */
 .artwork-list {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-top: 10px;
 }
 
 .artwork-item {
   display: flex;
   gap: 14px;
-  align-items: flex-start;
 }
 
 .artwork-thumb {
   flex: 0 0 120px;
-  max-width: 140px;
 }
 
 .artwork-thumb img {
   width: 100%;
-  display: block;
   border-radius: 12px;
-  object-fit: cover;
-}
-
-.artwork-thumb-placeholder {
-  width: 100%;
-  height: 0;
-  padding-bottom: 133%; /* 3:4 비율 */
-  border-radius: 12px;
-  background: #f3f4f6;
-  border: 1px dashed #d1d5db;
-}
-
-.artwork-text {
-  flex: 1;
-}
-
-.artwork-title {
-  margin: 0 0 2px;
-  font-size: 1rem;
-}
-
-.artwork-meta {
-  margin: 0 0 8px;
-  font-size: 0.82rem;
-  color: var(--color-text-soft);
 }
 
 /* =========================
-   EXHIBITION TAB LAYOUT
+   EXHIBITION LIST
    ========================= */
 .exhibition-list {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-top: 10px;
 }
 
 .exhibition-item {
   display: flex;
   gap: 14px;
-  align-items: flex-start;
-}
-
-.exhibition-thumb {
-  flex: 0 0 140px;
-  max-width: 180px;
 }
 
 .exhibition-thumb img {
   width: 100%;
-  display: block;
   border-radius: 12px;
-  object-fit: cover;
-}
-
-.exhibition-thumb-placeholder {
-  width: 100%;
-  height: 0;
-  padding-bottom: 62.5%; /* 16:10 정도 비율 */
-  border-radius: 12px;
-  background: #f3f4f6;
-  border: 1px dashed #d1d5db;
-}
-
-.exhibition-text {
-  flex: 1;
-}
-
-.exhibition-title {
-  margin: 0 0 2px;
-  font-size: 1rem;
-}
-
-.exhibition-meta {
-  margin: 0 0 8px;
-  font-size: 0.82rem;
-  color: var(--color-text-soft);
 }
 
 /* =========================
-   CHAPTER PAGES (공통)
+   CHAPTER PAGES
    ========================= */
 .chapter-title {
   font-family: var(--font-family-title);
   font-size: var(--font-size-chapter);
   margin: 0 0 8px;
-  color: #020617;
 }
 
 .chapter-meta {
@@ -322,140 +255,106 @@ body {
   color: var(--color-text-soft);
 }
 
-.page-block {
-  margin-top: 12px;
-}
-
-.page-number {
-  font-size: 0.78rem;
-  color: var(--color-text-soft);
-  margin: 0 0 8px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
+/* 페이지 = 사진 같은 느낌 삭제 → “진짜 책 페이지처럼” */
 .page-frame {
   position: relative;
   padding: 0;
-  border-radius: 12px;
-  background: transparent;
   border: none;
+  border-radius: 0;
+  background: transparent;
   overflow: visible;
 }
 
 .page-frame img {
-  display: block;
   width: 100%;
   height: auto;
   border-radius: 0;
   box-shadow: none;
 }
 
-/* 좌우 페이지 화살표 (데스크톱) */
+/* =========================
+   PAGE ARROWS (VERY TRANSPARENT)
+   ========================= */
 .page-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
+
   border-radius: 999px;
   border: none;
-  background: rgba(15, 23, 42, 0.28);
-  color: rgba(249, 250, 251, 0.5); /* 50% 투명도 */
+
+  /* 매우 투명한 배경 */
+  background: rgba(255, 255, 255, 0.15);
+
+  /* 매우 투명한 아이콘 */
+  color: rgba(255, 255, 255, 0.4);
+
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1rem;
+
+  font-size: 1.1rem;
   cursor: pointer;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.25);
+
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+
+  transition: 
+    background 0.18s ease,
+    color 0.18s ease,
+    transform 0.1s ease;
 }
 
-.page-arrow.left {
-  left: 10px;
+/* 위치 */
+.page-arrow.left { left: 6px; }
+.page-arrow.right { right: 6px; }
+
+/* Hover (PC) */
+.page-arrow:hover {
+  background: rgba(255, 255, 255, 0.35);
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(-50%) scale(1.06);
 }
 
-.page-arrow.right {
-  right: 10px;
+/* 모바일 터치 */
+@media (hover: none) {
+  .page-arrow:active {
+    background: rgba(255, 255, 255, 0.32);
+    color: rgba(0, 0, 0, 0.65);
+  }
 }
 
-.page-arrow:disabled{
-  opacity: 0.35;
+/* disabled 상태 */
+.page-arrow:disabled {
+  opacity: 0.15;
+  color: rgba(255, 255, 255, 0.2);
   cursor: default;
-  box-shadow: none;
 }
 
-/* 좌우 전체 터치 영역 (모바일용) */
-.page-tap-zone {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 50%;
-  cursor: pointer;
-  background: transparent;
-  display: none; /* 기본은 숨김, 모바일에서만 보이게 */
-}
+/* =========================
+   TAP ZONE 제거 (요청사항)
+   ========================= */
+.page-tap-zone { display: none !important; }
 
-.page-tap-zone.left {
-  left: 0;
-}
-
-.page-tap-zone.right {
-  right: 0;
-}
-
-/* 모바일용 탭 힌트 배지 */
-.tap-hint {
-  position: fixed;
-  left: 50%;
-  bottom: 16px;
-  transform: translateX(-50%);
-  padding: 8px 14px;
-  font-size: 0.78rem;
-  background: rgba(15, 23, 42, 0.9);
-  color: #f9fafb;
-  border-radius: 999px;
-  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.35);
-  z-index: 50;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s ease;
-}
-
-.tap-hint.show {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* 하단 네비 (목차 버튼) */
+/* =========================
+   CHAPTER NAV (목차)
+   ========================= */
 .chapter-nav {
   position: sticky;
   bottom: 16px;
   margin-top: 32px;
 }
 
-.chapter-nav-inner {
-  display: flex;
-  justify-content: center;
-}
-
-.nav-btn {
-  border-radius: 999px;
-  border: none;
-  padding: 9px 18px;
-  font-size: 0.9rem;
-  font-family: var(--font-family-base);
-  white-space: nowrap;
-  cursor: pointer;
-  transition: background 0.18s ease, color 0.18s ease,
-    transform 0.08s ease, box-shadow 0.18s ease, border-color 0.18s ease;
-}
-
 .nav-btn.ghost {
-  background: rgba(248, 250, 252, 0.9);
+  padding: 9px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(209,213,219,0.95);
+  background: rgba(248,250,252,0.9);
   color: var(--color-text-muted);
-  border: 1px solid rgba(209, 213, 219, 0.95);
 }
 
 /* =========================
@@ -473,24 +372,6 @@ body {
 /* =========================
    RESPONSIVE
    ========================= */
-@media (max-width: 768px) {
-  /* 모바일에서는 동그란 화살표 숨기고 탭존 활성화 */
-  .page-arrow {
-    display: none;
-  }
-
-  .page-tap-zone {
-    display: block;
-  }
-}
-
-/* 데스크톱에서는 탭 힌트 숨김 */
-@media (min-width: 769px) {
-  .tap-hint {
-    display: none;
-  }
-}
-
 @media (min-width: 900px) {
   .page {
     margin-top: 32px;
@@ -506,7 +387,6 @@ body {
   }
 
   .cover-wrapper {
-    margin-bottom: 0;
     flex: 0 0 260px;
   }
 
@@ -517,16 +397,7 @@ body {
 
   .header-text {
     flex: 1;
-    margin: 0;
     padding-left: 24px;
   }
-
-  .artwork-item,
-  .exhibition-item {
-    gap: 18px;
-  }
-
-  .chapter-nav {
-    bottom: 20px;
-  }
 }
+
