@@ -5,11 +5,7 @@
   <title>4장. 낙찬 – 관상어 Ornamental Fish</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- 폰트 -->
-  <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600&display=swap"
-  />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600&display=swap" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -20,20 +16,29 @@
 
       <section class="page-block">
         <p class="page-number" id="page-number"></p>
+
         <div class="page-frame">
-          <button class="page-arrow left" id="prev-arrow">&lt;</button>
           <img id="page-image" src="" alt="관상어 4장 낙찬" />
-          <button class="page-arrow right" id="next-arrow">&gt;</button>
+
+          <button class="page-arrow left" id="prev-btn">&lt;</button>
+          <button class="page-arrow right" id="next-btn">&gt;</button>
+
+          <div class="page-tap-zone left" id="tap-prev"></div>
+          <div class="page-tap-zone right" id="tap-next"></div>
         </div>
       </section>
     </article>
 
     <nav class="chapter-nav">
       <div class="chapter-nav-inner">
-        <button class="nav-btn ghost" id="toc-btn">목차</button>
+        <a href="index.html" class="nav-btn ghost">목차</a>
       </div>
     </nav>
   </main>
+
+  <div class="tap-hint" id="tap-hint">
+    화면 좌측/우측을 탭하면 페이지를 넘길 수 있습니다.
+  </div>
 
   <script>
     const startPage = 77;
@@ -44,9 +49,11 @@
 
     const imgEl = document.getElementById("page-image");
     const numEl = document.getElementById("page-number");
-    const prevArrow = document.getElementById("prev-arrow");
-    const nextArrow = document.getElementById("next-arrow");
-    const tocBtn = document.getElementById("toc-btn");
+    const prevBtn = document.getElementById("prev-btn");
+    const nextBtn = document.getElementById("next-btn");
+    const tapPrev = document.getElementById("tap-prev");
+    const tapNext = document.getElementById("tap-next");
+    const tapHint = document.getElementById("tap-hint");
 
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -56,20 +63,26 @@
       const pageStr = String(currentPage).padStart(3, "0");
       imgEl.src = `images/pages/p${pageStr}.jpg`;
       imgEl.alt = `관상어 4장 낙찬 - ${currentPage}쪽`;
-      numEl.textContent = `PAGE ${currentPage}`;
+      numEl.textContent = `Page ${currentPage}`;
 
-      prevArrow.disabled = currentPage === startPage;
+      prevBtn.disabled = currentPage === startPage;
+
+      if (currentPage === endPage) {
+        nextBtn.classList.add("next-chapter");
+      } else {
+        nextBtn.classList.remove("next-chapter");
+      }
     }
 
-    prevArrow.addEventListener("click", () => {
+    function goPrevPage() {
       if (currentPage > startPage) {
         currentPage--;
         updatePage();
         scrollToTop();
       }
-    });
+    }
 
-    nextArrow.addEventListener("click", () => {
+    function goNextPage() {
       if (currentPage < endPage) {
         currentPage++;
         updatePage();
@@ -77,11 +90,29 @@
       } else {
         window.location.href = nextChapterUrl;
       }
-    });
+    }
 
-    tocBtn.addEventListener("click", () => {
-      window.location.href = "index.html";
-    });
+    prevBtn.addEventListener("click", goPrevPage);
+    nextBtn.addEventListener("click", goNextPage);
+    tapPrev.addEventListener("click", goPrevPage);
+    tapNext.addEventListener("click", goNextPage);
+
+    (function showTapHintOnce() {
+      if (!tapHint) return;
+      if (window.innerWidth > 768) return;
+
+      const STORAGE_KEY = "ornamentalFishTapHintShown";
+      if (sessionStorage.getItem(STORAGE_KEY)) return;
+
+      setTimeout(() => {
+        tapHint.classList.add("show");
+      }, 600);
+
+      tapHint.addEventListener("click", () => {
+        tapHint.classList.remove("show");
+        sessionStorage.setItem(STORAGE_KEY, "1");
+      });
+    })();
 
     updatePage();
   </script>
