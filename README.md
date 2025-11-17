@@ -26,3 +26,31 @@ Printed work | Story, Graphic Art
 
 A hybrid printed work combining literary narrative and graphic imagery.
 An exploration of grief and healing – through the act of embracing you.
+
+—————————————————————————————————
+
+『관상어』는 남월이라는 작은 바닷가
+게스트하우스를 배경으로, 세 인물—윤, 란주,
+낙찬—의 시선이 교차하며 이어지는 서사 작업이다.
+
+이 이야기는 사건보다 감정의 흐름에 집중한다.
+사랑과 결핍, 욕망과 두려움, 그리고 서로를
+바라보는 시선 속에서 인물들은 계속해서 흔들리고,
+그 흔들림 속에서 자신을 다시 정의한다.
+
+각 인물의 내면에서 발생하는 미세한 균열의
+흔적들을 따라가며, 이 작품은 질문한다.
+
+"우리는 결국 서로를 사랑할 수 있을까 아니면,
+끝까지 타인으로 머무르게 될까”
+
+지은이.
+이규리 | Kyuri Lee
+물고기 밥주고, 그림 그리고, 글쓰는 사람
+cisternstill@gmail.com
+insta: @cisternstil
+
+초판 1쇄 발행.
+2025년 11월 17일
+
+—————————————————————————————————
