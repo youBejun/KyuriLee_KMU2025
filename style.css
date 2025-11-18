@@ -264,6 +264,22 @@ body {
   cursor: default;
 }
 
+/* intro 이미지를 좌우 여백 없이 꽉 차게 만드는 레이아웃 */
+.intro-fullwide {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+@media (min-width: 900px) {
+  .intro-fullwide {
+    margin-left: -40px;
+    margin-right: -40px;
+  }
+}
+
 /* =========================
    BOTTOM NAV (소개 / 목차 / 첫 화면)
    ========================= */
