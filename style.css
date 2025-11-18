@@ -53,7 +53,7 @@ body {
 }
 
 /* =========================
-   INDEX HEADER
+   INDEX / INTRO HEADER
    ========================= */
 .header { text-align: center; margin-bottom: 24px; }
 .cover-wrapper { margin-bottom: 18px; }
@@ -117,7 +117,7 @@ body {
 }
 
 /* =========================
-   TAB MENU
+   TAB MENU (현재는 사용 X, 남겨둠)
    ========================= */
 .tab-menu {
   display: flex;
@@ -147,7 +147,7 @@ body {
 .tab-panel.active { display: block; }
 
 /* =========================
-   TOC (목차 UI 복구)
+   TOC (목차 UI)
    ========================= */
 .toc-list { padding-left: 1.2rem; }
 .toc-list li { margin: 6px 0; }
@@ -158,15 +158,12 @@ body {
 .toc-list a:hover { text-decoration: underline; }
 
 /* =========================
-   ARTWORK LIST
+   ARTWORK / EXHIBITION 리스트 (구 버전, 필요시 사용)
    ========================= */
 .artwork-list { display: flex; flex-direction: column; gap: 16px; }
 .artwork-item { display: flex; gap: 14px; }
 .artwork-thumb img { width: 100%; border-radius: 12px; }
 
-/* =========================
-   EXHIBITION LIST
-   ========================= */
 .exhibition-list { display: flex; flex-direction: column; gap: 16px; }
 .exhibition-item { display: flex; gap: 14px; }
 .exhibition-thumb img { width: 100%; border-radius: 12px; }
@@ -236,14 +233,6 @@ body {
   transform: translateY(-50%) scale(1.05);
 }
 
-/* 모바일 터치 */
-@media (hover: none) {
-  .page-arrow:active {
-    background: rgba(255, 255, 255, 0.25);
-    color: rgba(0,0,0,0.65);
-  }
-}
-
 /* disabled */
 .page-arrow:disabled {
   opacity: 0.12;
@@ -251,11 +240,6 @@ body {
   color: rgba(0,0,0,0.15);
   cursor: default;
 }
-
-/* =========================
-   TAP ZONE 제거
-   ========================= */
-.page-tap-zone { display: none !important; }
 
 /* =========================
    FOOTER
@@ -267,6 +251,237 @@ body {
   font-size: 0.82rem;
   color: var(--color-text-muted);
   text-align: center;
+}
+
+/* =========================
+   LANDING PAGE (TRIGLAV STYLE)
+   ========================= */
+
+.landing {
+  min-height: 100vh;
+  padding: 24px 18px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+}
+
+.landing-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.landing-title-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.landing-label {
+  margin: 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-text-soft);
+}
+
+.landing-title-kr {
+  margin: 2px 0 0;
+  font-family: var(--font-family-title);
+  font-size: 1.4rem;
+  letter-spacing: 0.04em;
+  color: #f9fafb;
+}
+
+.landing-title-en {
+  margin: 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #e5e7eb;
+}
+
+/* 상단 메뉴 – 말풍선 없이 텍스트만 */
+.landing-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  justify-content: flex-end;
+  font-size: 0.82rem;
+}
+
+.landing-nav a {
+  text-decoration: none;
+  color: #e5e7eb;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.75;
+  transition: opacity 0.18s ease, transform 0.12s ease;
+}
+
+.landing-nav a:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+/* 가운데 세로 카드 (겉싸개 이미지) */
+.landing-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-cover-button {
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  max-width: 360px;
+  width: 100%;
+}
+
+.landing-cover-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* 하단 푸터 */
+.landing-footer {
+  margin-top: 24px;
+  font-size: 0.74rem;
+  color: #9ca3af;
+  text-align: left;
+}
+
+/* =========================
+   PAGE HEADER (INTRO + CHAPTER 공통)
+   ========================= */
+
+.page--chapter {
+  padding-top: 20px;
+}
+
+.page-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid var(--color-border-page);
+  padding-bottom: 8px;
+}
+
+.page-home-link {
+  font-family: var(--font-family-title);
+  font-size: 1.05rem;
+  text-decoration: none;
+  color: #020617;
+}
+
+.page-home-link-en {
+  font-size: 0.8rem;
+  margin-left: 6px;
+  color: var(--color-text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.page-header-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 0.8rem;
+}
+
+.page-header-nav a {
+  text-decoration: none;
+  color: var(--color-text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding-bottom: 3px;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.page-header-nav a.is-active {
+  color: #020617;
+  border-bottom-color: var(--color-accent);
+}
+
+.page-header-nav a:hover {
+  color: #020617;
+}
+
+/* =========================
+   PAGE TAP ZONE (모바일)
+   ========================= */
+.page-tap-zone {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background: transparent;
+}
+
+.page-tap-zone.left { left: 0; }
+.page-tap-zone.right { right: 0; }
+
+/* 모바일에서 화살표 숨기고 탭 존 사용 */
+@media (max-width: 768px) {
+  .page-arrow {
+    display: none;
+  }
+
+  .page-tap-zone {
+    display: block;
+  }
+}
+
+/* 모바일 탭 힌트 */
+.tap-hint {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  background: rgba(15, 23, 42, 0.9);
+  color: #e5e7eb;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 50;
+}
+
+.tap-hint.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(-4px);
+}
+
+/* =========================
+   GALLERY (Artworks / Photos / Figures / Exhibition)
+   ========================= */
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.gallery--full img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 /* =========================
@@ -293,5 +508,17 @@ body {
     flex: 1;
     padding-left: 24px;
     margin: 0;
+  }
+
+  .landing {
+    padding: 32px 0 40px;
+  }
+
+  .landing-main {
+    justify-content: flex-start;
+  }
+
+  .landing-cover-button {
+    max-width: 380px;
   }
 }
