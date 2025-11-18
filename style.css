@@ -192,8 +192,8 @@ body {
 @media (min-width: 900px) {
   .intro-fullwide {
     width: calc(100% + 80px);  /* 40px + 40px */
-    margin-left: -40px;
-    margin-right: -40px;
+    margin-left: -41px;
+    margin-right: -41px;
   }
 }
 
@@ -299,8 +299,8 @@ body {
 
 @media (min-width: 900px) {
   .intro-fullwide {
-    margin-left: -40px;
-    margin-right: -40px;
+    margin-left: -41px;
+    margin-right: -41px;
   }
 }
 
@@ -369,8 +369,8 @@ body {
 @media (min-width: 900px) {
   .chapter-fullwide {
     width: calc(100% + 80px); /* 데스크톱 page 패딩(40+40) 상쇄 */
-    margin-left: -40px;
-    margin-right: -40px;
+    margin-left: -41px;
+    margin-right: -41px;
   }
 }
 
@@ -660,8 +660,8 @@ body {
 /* 데스크톱에서 여백이 더 넓으니까 그만큼 더 확장 */
 @media (min-width: 900px) {
   .gallery--full {
-    margin-left: -40px;
-    margin-right: -40px;
+    margin-left: -41px;
+    margin-right: -41px;
   }
 }
 
