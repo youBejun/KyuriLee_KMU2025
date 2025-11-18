@@ -408,13 +408,13 @@ body {
   background: var(--color-bg-page);
   font-family: var(--font-family-title);
   font-size: 1.8rem;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.03em;
   color: #020617;
 }
 
 .landing-title-main-en {
-  margin-top: 0px;
+  margin-top: -2px;
   font-size: 0.70rem;
   font-weight: 600;
   letter-spacing: 0.18em;
