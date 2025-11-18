@@ -12,12 +12,14 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="page">
+  <!-- 챕터 스타일 페이지 -->
+  <main class="page page--chapter">
+
     <!-- 상단 공통 헤더 -->
     <header class="page-header">
       <div class="page-header-title">
         <a href="intro.html" class="page-home-link">
-          관상어 <span class="page-home-link-en">Ornamental Fish</span>
+          관상어 <span class="page-home-link-en">ORNAMENTAL FISH</span>
         </a>
       </div>
       <nav class="page-header-nav">
@@ -29,6 +31,7 @@
       </nav>
     </header>
 
+    <!-- 설명 -->
     <section class="section">
       <h1 class="section-title">Exhibition</h1>
       <p class="paragraph-compact">
@@ -36,16 +39,17 @@
       </p>
     </section>
 
-    <section class="gallery gallery--full">
-      <!-- 여기 src를 실제 전시 사진으로 교체 -->
-      <img src="images/exhibition/exhibition01.jpg" alt="Exhibition view 01" />
-      <img src="images/exhibition/exhibition02.jpg" alt="Exhibition view 02" />
-      <img src="images/exhibition/exhibition03.jpg" alt="Exhibition view 03" />
-      <img src="images/exhibition/exhibition04.jpg" alt="Exhibition view 04" />
+    <!-- 이미지 꽉 차는 갤러리 -->
+    <section>
+      <div class="gallery gallery--full">
+        <img src="images/exhibition/exhibition01.jpg" alt="Exhibition view 01" />
+        <img src="images/exhibition/exhibition02.jpg" alt="Exhibition view 02" />
+        <img src="images/exhibition/exhibition03.jpg" alt="Exhibition view 03" />
+        <img src="images/exhibition/exhibition04.jpg" alt="Exhibition view 04" />
+      </div>
     </section>
 
-    <footer class="footer">
-          <!-- 하단 네비게이터 -->
+    <!-- 하단 네비 -->
     <nav class="chapter-nav">
       <div class="chapter-nav-inner">
         <a href="index.html" class="nav-btn ghost">HOME</a>
@@ -53,9 +57,11 @@
       </div>
     </nav>
 
+    <!-- footer -->
     <footer class="footer">
       <p>© 2025 Kyuri Lee. All rights reserved.</p>
     </footer>
+
   </main>
 </body>
 </html>
