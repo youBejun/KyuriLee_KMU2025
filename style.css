@@ -426,6 +426,15 @@ body {
   justify-content: center;
   align-items: flex-start;
   margin-top: 4px;
+   margin-left: -18px;
+   margin-right: -18px;
+}
+
+@media (min-width: 900px) {
+   .landing-cover-section {
+      margin-left: -40px;
+      margin-right: -40px;
+   }
 }
 
 .landing-cover-image {
