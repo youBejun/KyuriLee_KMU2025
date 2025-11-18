@@ -392,10 +392,7 @@ https://youbejun.github.io/KyuriLee_KMU2025/
 }
 
 .page-header-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  font-size: 0.8rem;
+  display: none;
 }
 
 .page-header-nav a {
