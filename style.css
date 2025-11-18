@@ -397,7 +397,7 @@ body {
    padding-left: 8px;
    background: var(--color-bg-page);
   font-family: var(--font-family-title);
-  font-size: 2.0rem;          /* 글씨 크게 */
+  font-size: 1.8rem;          /* 글씨 크게 */
   font-weight: 700;           /* Bold */
   letter-spacing: 0.03em;
   color: #020617;
@@ -405,7 +405,7 @@ body {
 
 .landing-title-main-en {
   margin-top: 2px;
-  font-size: 0.90rem;
+  font-size: 0.70rem;
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
