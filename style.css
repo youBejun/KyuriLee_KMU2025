@@ -426,14 +426,14 @@ body {
   justify-content: center;
   align-items: flex-start;
   margin-top: 4px;
-   margin-left: -18px;
-   margin-right: -18px;
+   margin-left: -20px;
+   margin-right: -20px;
 }
 
 @media (min-width: 900px) {
    .landing-cover-section {
-      margin-left: -40px;
-      margin-right: -40px;
+      margin-left: -42px;
+      margin-right: -42px;
    }
 }
 
@@ -654,6 +654,43 @@ body {
   .landing-cover-button {
     max-width: 380px;
   }
+
+   /* =========================
+   FONT WEIGHT SYSTEM (Pretendard)
+   ========================= */
+
+/* 제목 계열: SemiBold (600) */
+.book-title,
+.book-title-en,
+.section-title,
+.chapter-title,
+.landing-title-main,
+.landing-title-main-en,
+.page-home-link,
+.page-home-link-en {
+  font-family: var(--font-family-title);
+  font-weight: 600;
+}
+
+/* 본문 계열: Light (300) */
+body,
+.page,
+p,
+li,
+.paragraph-compact,
+.gallery,
+.toc-list {
+  font-family: var(--font-family-base);
+  font-weight: 300;
+}
+
+/* 메뉴류: Regular (400) */
+.landing-menu a,
+.nav-btn {
+  font-family: var(--font-family-base);
+  font-weight: 400;
+}
+
 
   /* 상단 우측 메뉴 숨기기 (혹시 몰라 한 번 더) */
   .page-header-nav {
