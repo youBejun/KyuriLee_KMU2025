@@ -175,6 +175,30 @@ body {
 .toc-list a:hover { text-decoration: underline; }
 
 /* =========================
+   INTRO COVER FULL WIDTH
+   ========================= */
+.intro-fullwide {
+  display: block;
+  width: calc(100% + 40px);  /* 좌우 패딩(20px + 20px)을 보정 */
+  max-width: none;
+  margin-left: -20px;
+  margin-right: -20px;
+
+  height: auto;
+  object-fit: cover;
+}
+
+/* 데스크톱일 때는 page 패딩이 40px이라 거기에 맞춰 보정 */
+@media (min-width: 900px) {
+  .intro-fullwide {
+    width: calc(100% + 80px);  /* 40px + 40px */
+    margin-left: -40px;
+    margin-right: -40px;
+  }
+}
+
+
+/* =========================
    ARTWORK / EXHIBITION 리스트 (구 버전, 필요시 사용)
    ========================= */
 .artwork-list { display: flex; flex-direction: column; gap: 16px; }
