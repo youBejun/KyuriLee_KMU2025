@@ -12,12 +12,14 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="page">
+  <!-- 챕터 스타일 페이지 -->
+  <main class="page page--chapter">
+
     <!-- 상단 공통 헤더 -->
     <header class="page-header">
       <div class="page-header-title">
         <a href="intro.html" class="page-home-link">
-          관상어 <span class="page-home-link-en">Ornamental Fish</span>
+          관상어 <span class="page-home-link-en">ORNAMENTAL FISH</span>
         </a>
       </div>
       <nav class="page-header-nav">
@@ -29,6 +31,7 @@
       </nav>
     </header>
 
+    <!-- 섹션 타이틀 + 설명 -->
     <section class="section">
       <h1 class="section-title">Figures</h1>
       <p class="paragraph-compact">
@@ -36,23 +39,25 @@
       </p>
     </section>
 
-    <section class="gallery gallery--full">
-      <!-- 여기 src를 실제 삽화 이미지로 교체 -->
-      <img src="images/figures/figure01.png" alt="Figure 01" />
-      <img src="images/figures/figure02.png" alt="Figure 02" />
-      <img src="images/figures/figure03.png" alt="Figure 03" />
-      <img src="images/figures/figure04.png" alt="Figure 04" />
-      <img src="images/figures/figure05.png" alt="Figure 05" />
-      <img src="images/figures/figure06.png" alt="Figure 06" />
-      <img src="images/figures/figure07.png" alt="Figure 07" />
-      <img src="images/figures/figure08.png" alt="Figure 08" />
-      <img src="images/figures/figure09.png" alt="Figure 09" />
-      <img src="images/figures/figure10.png" alt="Figure 10" />
-      <img src="images/figures/figure11.png" alt="Figure 11" />
+    <!-- 삽화 풀블리드 갤러리 -->
+    <section>
+      <div class="gallery gallery--full">
+        <!-- 여기 src를 실제 삽화 이미지로 교체 -->
+        <img src="images/figures/figure01.png" alt="Figure 01" />
+        <img src="images/figures/figure02.png" alt="Figure 02" />
+        <img src="images/figures/figure03.png" alt="Figure 03" />
+        <img src="images/figures/figure04.png" alt="Figure 04" />
+        <img src="images/figures/figure05.png" alt="Figure 05" />
+        <img src="images/figures/figure06.png" alt="Figure 06" />
+        <img src="images/figures/figure07.png" alt="Figure 07" />
+        <img src="images/figures/figure08.png" alt="Figure 08" />
+        <img src="images/figures/figure09.png" alt="Figure 09" />
+        <img src="images/figures/figure10.png" alt="Figure 10" />
+        <img src="images/figures/figure11.png" alt="Figure 11" />
+      </div>
     </section>
 
-    <footer class="footer">
-          <!-- 하단 네비게이터 -->
+    <!-- 하단 네비게이터 -->
     <nav class="chapter-nav">
       <div class="chapter-nav-inner">
         <a href="index.html" class="nav-btn ghost">HOME</a>
@@ -60,9 +65,11 @@
       </div>
     </nav>
 
+    <!-- 공통 푸터 -->
     <footer class="footer">
       <p>© 2025 Kyuri Lee. All rights reserved.</p>
     </footer>
+
   </main>
 </body>
 </html>
