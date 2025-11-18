@@ -187,60 +187,7 @@ body {
   box-shadow: none;
 }
 
-/* =========================
-   PAGE ARROWS — 블러 제거 + 완전 투명 배경
-   ========================= */
-.page-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 34px;
-  height: 34px;
-
-  border-radius: 999px;
-  border: none;
-
-  /* 완전 투명 회색(원 거의 안 보임) */
-  background: rgba(200, 200, 200, 0.08);
-
-  /* 화살표도 투명 */
-  color: rgba(0, 0, 0, 0.28);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-size: 1rem;
-  cursor: pointer;
-
-  /* 블러 제거 */
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-
-  /* 그림자 제거 */
-  box-shadow: none !important;
-
-  transition: background 0.15s ease, color 0.15s ease, transform 0.1s ease;
-}
-
-.page-arrow.left { left: 6px; }
-.page-arrow.right { right: 6px; }
-
-/* Hover (PC) */
-.page-arrow:hover {
-  background: rgba(255, 255, 255, 0.25);
-  color: rgba(0,0,0,0.65);
-  transform: translateY(-50%) scale(1.05);
-}
-
-/* disabled */
-.page-arrow:disabled {
-  opacity: 0.12;
-  background: rgba(200,200,200,0.05);
-  color: rgba(0,0,0,0.15);
-  cursor: default;
-}
-
+https://youbejun.github.io/KyuriLee_KMU2025/
 /* =========================
    BOTTOM NAV (소개 / 목차 / 첫 화면)
    ========================= */
