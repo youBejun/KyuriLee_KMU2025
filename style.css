@@ -52,21 +52,22 @@ body {
   box-shadow: none;
 }
 
+/* 풀 브라우저 폭을 쓰는 컨테이너 (필요 시 사용) */
 .full-width-container {
-   width: 100vw;
-   position: relative;
-   left: 50%;
-   right: 50%;
-   margin-left: -50vw;
-   margin-right: -50vw;
-   height: 60vh;
-   overflow: hidden;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  height: 60vh;
+  overflow: hidden;
 }
 
 .full-width-container .landing-cover-image {
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* =========================
@@ -175,28 +176,31 @@ body {
 .toc-list a:hover { text-decoration: underline; }
 
 /* =========================
-   INTRO COVER FULL WIDTH
+   INTRO / CHAPTER FULL-WIDTH IMAGES
+   (.intro-fullwide, .chapter-fullwide)
    ========================= */
-.intro-fullwide {
-  display: block;
-  width: calc(100% + 40px);  /* 좌우 패딩(20px + 20px)을 보정 */
-  max-width: none;
-  margin-left: -20px;
-  margin-right: -20px;
 
+/* 모바일: page padding 좌우 18px → 18 + 18 = 36 */
+.intro-fullwide,
+.chapter-fullwide {
+  display: block;
+  width: calc(100% + 36px);
+  max-width: none;
+  margin-left: -18px;
+  margin-right: -18px;
   height: auto;
   object-fit: cover;
 }
 
-/* 데스크톱일 때는 page 패딩이 40px이라 거기에 맞춰 보정 */
+/* 데스크톱: page padding 좌우 40px → 40 + 40 = 80 */
 @media (min-width: 900px) {
-  .intro-fullwide {
-    width: calc(100% + 80px);  /* 40px + 40px */
-    margin-left: -41px;
-    margin-right: -41px;
+  .intro-fullwide,
+  .chapter-fullwide {
+    width: calc(100% + 80px);
+    margin-left: -40px;
+    margin-right: -40px;
   }
 }
-
 
 /* =========================
    ARTWORK / EXHIBITION 리스트 (구 버전, 필요시 사용)
@@ -235,20 +239,17 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-
-  /* 클릭 영역은 넓게, 하지만 보이지 않게 */
   width: 56px;
   height: 56px;
   padding: 0;
   border: none;
   background: transparent;
-  border-radius: 999px; /* 실제 히트 영역만 동그라미 */
+  border-radius: 999px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  /* 화살표만 보이도록, 약간 투명한 검정 */
   font-size: 2rem;
   line-height: 1;
   color: rgba(0, 0, 0, 0.10);
@@ -257,7 +258,7 @@ body {
   box-shadow: none;
   outline: none;
 
-  z-index: 2; /* 탭 존보다 위에 */
+  z-index: 2;
   transition:
     color 0.15s ease,
     transform 0.08s ease,
@@ -288,22 +289,6 @@ body {
   cursor: default;
 }
 
-/* intro 이미지를 좌우 여백 없이 꽉 차게 만드는 레이아웃 */
-.intro-fullwide {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin-left: -20px;
-  margin-right: -20px;
-}
-
-@media (min-width: 900px) {
-  .intro-fullwide {
-    margin-left: -41px;
-    margin-right: -41px;
-  }
-}
-
 /* =========================
    BOTTOM NAV (소개 / 목차 / 첫 화면)
    ========================= */
@@ -313,7 +298,7 @@ body {
 
 .chapter-nav-inner {
   display: flex;
-  justify-content: center;   /* 가운데 정렬 */
+  justify-content: center;
   gap: 12px;
 }
 
@@ -323,7 +308,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 8px 18px;
-  border-radius: 999px;              /* 둥근 사각형 (필 버튼) */
+  border-radius: 999px;
   border: 1px solid #e5e5ea;
   background: #f9fafb;
   font-size: 0.85rem;
@@ -354,27 +339,6 @@ body {
 }
 
 /* =========================
-   STORY COVER FULL WIDTH (chapter1~5)
-   ========================= */
-.chapter-fullwide {
-  display: block;
-  width: calc(100% + 40px); /* 모바일 page 패딩(20+20) 상쇄 */
-  max-width: none;
-  margin-left: -20px;
-  margin-right: -20px;
-  height: auto;
-  object-fit: cover;
-}
-
-@media (min-width: 900px) {
-  .chapter-fullwide {
-    width: calc(100% + 80px); /* 데스크톱 page 패딩(40+40) 상쇄 */
-    margin-left: -41px;
-    margin-right: -41px;
-  }
-}
-
-/* =========================
    FOOTER
    ========================= */
 .footer {
@@ -400,7 +364,7 @@ body {
 .landing-top {
   padding-top: 10px;
   margin-bottom: 14px;
-  border-top: 1px solid var(--color-border-page); /* ------------------ */
+  border-top: 1px solid var(--color-border-page);
 }
 
 .landing-label {
@@ -414,36 +378,36 @@ body {
 /* 관상어 / Ornamental Fish 를 두 줄로, 오른쪽 정렬 */
 .landing-title-row {
   display: flex;
-   flex-direction: column;
-   align-items: flex-end;
-   text-align: right;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
 }
 
 .landing-title-wrap {
-   position: relative;
-   width: 100%;
-   margin-top: 18px;
-   margin-bottom: 6px;
+  position: relative;
+  width: 100%;
+  margin-top: 18px;
+  margin-bottom: 6px;
 }
 
 .landing-title-line {
-   position: absolute;
-   top: 50%;
-   left: 0;
-   width: 100%;
-   height: 2px;
-   background: #0f172a;
-   transform: translateY(6px);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #0f172a;
+  transform: translateY(6px);
 }
 
 .landing-title-main {
-   position: relative;
-   display: inline-block;
-   padding-left: 8px;
-   background: var(--color-bg-page);
+  position: relative;
+  display: inline-block;
+  padding-left: 8px;
+  background: var(--color-bg-page);
   font-family: var(--font-family-title);
-  font-size: 1.8rem;          /* 글씨 크게 */
-  font-weight: 700;           /* Bold */
+  font-size: 1.8rem;
+  font-weight: 700;
   letter-spacing: 0.03em;
   color: #020617;
 }
@@ -474,7 +438,7 @@ body {
   text-decoration: none;
   color: #111827;
   padding: 0;
-   line-height: 1.05;
+  line-height: 1.05;
 }
 
 .landing-menu a:hover {
@@ -488,20 +452,20 @@ body {
   justify-content: center;
   align-items: flex-start;
   margin-top: 4px;
-   margin-left: -20px;
-   margin-right: -20px;
+  margin-left: -18px;
+  margin-right: -18px;
 }
 
 @media (min-width: 900px) {
-   .landing-cover-section {
-      margin-left: -42px;
-      margin-right: -42px;
-   }
+  .landing-cover-section {
+    margin-left: -40px;
+    margin-right: -40px;
+  }
 }
 
 .landing-cover-image {
   display: block;
-  width: 100%;      /* 흰 카드 안에서 가로 꽉 차게 */
+  width: 100%;
   height: auto;
   max-width: none;
 }
@@ -522,7 +486,7 @@ body {
   }
 
   .landing-cover-image {
-    max-height: none;      /* 화면의 55% 정도까지만 사용 */
+    max-height: none;
     object-fit: contain;
   }
 }
@@ -653,15 +617,14 @@ body {
 
 /* 흰 카드 좌우 여백을 깨고, 이미지가 꽉 차게 나오도록 */
 .gallery--full {
-  margin-left: -20px;
-  margin-right: -20px;
+  margin-left: -18px;
+  margin-right: -18px;
 }
 
-/* 데스크톱에서 여백이 더 넓으니까 그만큼 더 확장 */
 @media (min-width: 900px) {
   .gallery--full {
-    margin-left: -41px;
-    margin-right: -41px;
+    margin-left: -40px;
+    margin-right: -40px;
   }
 }
 
@@ -676,24 +639,60 @@ body {
    CUSTOM FONT (로컬 업로드)
    ========================= */
 @font-face {
-   font-family: 'Pretendard';
-   src: url('fonts/Pretendard-Light.otf') format('opentype');
-   font-weight: 300;
-   font-style: normal;
+  font-family: 'Pretendard';
+  src: url('fonts/Pretendard-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
 }
 
 @font-face {
-   font-family: 'Pretendard';
-   src: url('fonts/Pretendard-SemiBold.otf') format('opentype');
-   font-weight: 600;
-   font-style: normal;
+  font-family: 'Pretendard';
+  src: url('fonts/Pretendard-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
 }
 
 @font-face {
-   font-family: 'Pretendard';
-   src: url('fonts/Pretendard-Regular.otf') format('opentype');
-   font-weight: 400;
-   font-style: normal;
+  font-family: 'Pretendard';
+  src: url('fonts/Pretendard-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* =========================
+   FONT WEIGHT SYSTEM (Pretendard)
+   ========================= */
+
+/* 제목 계열: SemiBold (600) */
+.book-title,
+.book-title-en,
+.section-title,
+.chapter-title,
+.landing-title-main,
+.landing-title-main-en,
+.page-home-link,
+.page-home-link-en {
+  font-family: var(--font-family-title);
+  font-weight: 600;
+}
+
+/* 본문 계열: Light (300) */
+body,
+.page,
+p,
+li,
+.paragraph-compact,
+.gallery,
+.toc-list {
+  font-family: var(--font-family-base);
+  font-weight: 300;
+}
+
+/* 메뉴류: Regular (400) */
+.landing-menu a,
+.nav-btn {
+  font-family: var(--font-family-base);
+  font-weight: 400;
 }
 
 /* =========================
@@ -733,43 +732,6 @@ body {
   .landing-cover-button {
     max-width: 380px;
   }
-
-   /* =========================
-   FONT WEIGHT SYSTEM (Pretendard)
-   ========================= */
-
-/* 제목 계열: SemiBold (600) */
-.book-title,
-.book-title-en,
-.section-title,
-.chapter-title,
-.landing-title-main,
-.landing-title-main-en,
-.page-home-link,
-.page-home-link-en {
-  font-family: var(--font-family-title);
-  font-weight: 600;
-}
-
-/* 본문 계열: Light (300) */
-body,
-.page,
-p,
-li,
-.paragraph-compact,
-.gallery,
-.toc-list {
-  font-family: var(--font-family-base);
-  font-weight: 300;
-}
-
-/* 메뉴류: Regular (400) */
-.landing-menu a,
-.nav-btn {
-  font-family: var(--font-family-base);
-  font-weight: 400;
-}
-
 
   /* 상단 우측 메뉴 숨기기 (혹시 몰라 한 번 더) */
   .page-header-nav {
