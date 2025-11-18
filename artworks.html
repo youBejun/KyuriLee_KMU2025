@@ -12,14 +12,16 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="page">
+  <!-- 다른 페이지와 동일한 카드 레이아웃 + 챕터 스타일 -->
+  <main class="page page--chapter">
     <!-- 상단 공통 헤더 -->
     <header class="page-header">
       <div class="page-header-title">
         <a href="intro.html" class="page-home-link">
-          관상어 <span class="page-home-link-en">Ornamental Fish</span>
+          관상어 <span class="page-home-link-en">ORNAMENTAL FISH</span>
         </a>
       </div>
+      <!-- 상단 우측 메뉴 (CSS에서 기본적으로 display:none; 이라 모바일에서는 안 보임) -->
       <nav class="page-header-nav">
         <a href="chapter1.html">Story</a>
         <a href="artworks.html" class="is-active">Artworks</a>
@@ -29,6 +31,7 @@
       </nav>
     </header>
 
+    <!-- 섹션 제목 + 짧은 설명 -->
     <section class="section">
       <h1 class="section-title">Artworks</h1>
       <p class="paragraph-compact">
@@ -36,17 +39,19 @@
       </p>
     </section>
 
-    <section class="gallery gallery--full">
-      <!-- 여기 src를 실제 작업 사진으로 교체하면 됨 -->
-      <img src="images/artworks/artwork01.jpg" alt="Artwork 01" />
-      <img src="images/artworks/artwork02.jpg" alt="Artwork 02" />
-      <img src="images/artworks/artwork03.jpg" alt="Artwork 03" />
-      <img src="images/artworks/artwork04.jpg" alt="Artwork 04" />
-      <img src="images/artworks/artwork05.jpg" alt="Artwork 05" />
+    <!-- 이미지가 카드 좌우를 깨고 꽉 차게 나오는 갤러리 -->
+    <section>
+      <div class="gallery gallery--full">
+        <!-- 여기 src를 실제 작업 사진 파일명으로만 교체하면 됨 -->
+        <img src="images/artworks/artwork01.jpg" alt="Artwork 01" />
+        <img src="images/artworks/artwork02.jpg" alt="Artwork 02" />
+        <img src="images/artworks/artwork03.jpg" alt="Artwork 03" />
+        <img src="images/artworks/artwork04.jpg" alt="Artwork 04" />
+        <img src="images/artworks/artwork05.jpg" alt="Artwork 05" />
+      </div>
     </section>
 
-    <footer class="footer">
-          <!-- 하단 네비게이터 -->
+    <!-- 하단 네비게이터 -->
     <nav class="chapter-nav">
       <div class="chapter-nav-inner">
         <a href="index.html" class="nav-btn ghost">HOME</a>
@@ -54,6 +59,7 @@
       </div>
     </nav>
 
+    <!-- 공통 푸터 -->
     <footer class="footer">
       <p>© 2025 Kyuri Lee. All rights reserved.</p>
     </footer>
