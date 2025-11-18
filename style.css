@@ -594,6 +594,30 @@ body {
 }
 
 /* =========================
+   CUSTOM FONT (로컬 업로드)
+   ========================= */
+@font-face {
+   font-family: 'MyCustomFont';
+   src: url('fonts/Pretendard-Light.otf') format('opentype');
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'MyCustomFont';
+   src: url('fonts/Pretendard-SemiBold.otf') format('opentype');
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'MyCustomFont';
+   src: url('fonts/Pretendard-Regular.otf') format('opentype');
+   font-weight: normal;
+   font-style: normal;
+}
+
+/* =========================
    RESPONSIVE
    ========================= */
 @media (min-width: 900px) {
