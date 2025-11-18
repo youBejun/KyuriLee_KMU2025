@@ -341,25 +341,33 @@ body {
    text-align: right;
 }
 
+.landing-title-wrap {
+   position: relative;
+   width: 100%;
+   margin-top: 18px;
+   margin-bottom: 6px;
+}
+
+.landing-title-line {
+   position: absolute;
+   top: 50%;
+   left: 0;
+   width: 100%;
+   height: 2px;
+   background: #0f172a;
+   transform: translateY(6px);
+}
+
 .landing-title-main {
    position: relative;
    display: inline-block;
+   padding-left: 8px;
+   background: var(--color-bg-page);
   font-family: var(--font-family-title);
-  font-size: 2.5rem;          /* 글씨 크게 */
+  font-size: 2.4rem;          /* 글씨 크게 */
   font-weight: 700;           /* Bold */
   letter-spacing: 0.03em;
   color: #020617;
-}
-
-.landing-title-main::before {
-   content: "";
-   position: absolute;
-   right: 100%;
-   top: 50%;
-   transform: translateY(-50%);
-   width: 260px;
-   height: 2px;
-   background: #111827;
 }
 
 .landing-title-main-en {
