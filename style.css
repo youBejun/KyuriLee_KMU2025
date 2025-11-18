@@ -451,7 +451,7 @@ body {
   }
 
   .landing-cover-image {
-    max-height: 55vh;      /* 화면의 55% 정도까지만 사용 */
+    max-height: none;      /* 화면의 55% 정도까지만 사용 */
     object-fit: contain;
   }
 }
@@ -464,7 +464,6 @@ body {
 
   .landing-cover-image {
     max-width: none;
-    max-height: 70vh;
   }
 }
 
