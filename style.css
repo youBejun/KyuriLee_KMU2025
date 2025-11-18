@@ -335,8 +335,8 @@ https://youbejun.github.io/KyuriLee_KMU2025/
 .landing-cover-image {
   display: block;
   width: 100%;
-  max-width: 360px;
-  height: auto;
+  max-width: auto;
+  height: none;
 }
 
 /* 푸터는 좌측 정렬 */
@@ -344,7 +344,7 @@ https://youbejun.github.io/KyuriLee_KMU2025/
   margin-top: 20px;
   font-size: 0.78rem;
   color: var(--color-text-muted);
-  text-align: left;
+  text-align: center;
 }
 
 /* 모바일에서 화면 안에 다 들어오도록 */
@@ -367,7 +367,7 @@ https://youbejun.github.io/KyuriLee_KMU2025/
   }
 
   .landing-cover-image {
-    max-width: 420px;
+    max-width: none;
     max-height: 70vh;
   }
 }
