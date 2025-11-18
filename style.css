@@ -52,6 +52,21 @@ body {
   box-shadow: none;
 }
 
+.full-width-container {
+   width: 100vw;
+   position: relative;
+   left: 50%;
+   right: 50%;
+   margin-left: -50vw;
+   margin-right: -50vw;
+}
+
+.full-width-container img {
+   width: 100%;
+   height: auto;
+   display: block;
+}
+
 /* =========================
    INDEX / INTRO HEADER
    ========================= */
