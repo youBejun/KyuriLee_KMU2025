@@ -354,6 +354,27 @@ body {
 }
 
 /* =========================
+   STORY COVER FULL WIDTH (chapter1~5)
+   ========================= */
+.chapter-fullwide {
+  display: block;
+  width: calc(100% + 40px); /* 모바일 page 패딩(20+20) 상쇄 */
+  max-width: none;
+  margin-left: -20px;
+  margin-right: -20px;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (min-width: 900px) {
+  .chapter-fullwide {
+    width: calc(100% + 80px); /* 데스크톱 page 패딩(40+40) 상쇄 */
+    margin-left: -40px;
+    margin-right: -40px;
+  }
+}
+
+/* =========================
    FOOTER
    ========================= */
 .footer {
