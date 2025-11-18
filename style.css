@@ -251,111 +251,125 @@ https://youbejun.github.io/KyuriLee_KMU2025/
 }
 
 /* =========================
-   LANDING PAGE (TRIGLAV STYLE)
+   LANDING PAGE (타이틀 + 메뉴)
    ========================= */
 
-.landing {
+.landing-page {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
-  padding: 24px 18px 28px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  max-width: var(--page-max-width);
-  margin: 0 auto;
 }
 
-.landing-header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 16px;
-  margin-bottom: 24px;
-}
-
-.landing-title-block {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
+/* --- 윗줄 + 타이틀 --- */
+.landing-top {
+  padding-top: 10px;
+  margin-bottom: 14px;
+  border-top: 1px solid var(--color-border-page); /* ------------------ */
 }
 
 .landing-label {
-  margin: 0;
+  margin: 0 0 4px;
   font-size: 0.72rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--color-text-soft);
 }
 
-.landing-title-kr {
-  margin: 2px 0 0;
-  font-family: var(--font-family-title);
-  font-size: 1.4rem;
-  letter-spacing: 0.04em;
-  color: #f9fafb;
+/* 관상어 / Ornamental Fish 를 두 줄로, 오른쪽 정렬 */
+.landing-title-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
 }
 
-.landing-title-en {
-  margin: 0;
-  font-size: 0.78rem;
+.landing-title-main {
+  font-family: var(--font-family-title);
+  font-size: 1.8rem;          /* 글씨 크게 */
+  font-weight: 700;           /* Bold */
+  letter-spacing: 0.03em;
+  color: #020617;
+}
+
+.landing-title-main-en {
+  margin-top: 2px;
+  font-size: 0.98rem;
+  font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #e5e7eb;
+  color: var(--color-text-muted);
 }
 
-/* 상단 메뉴 – 말풍선 없이 텍스트만 */
-.landing-nav {
+/* --- 세로 메뉴 Intro / Story / ... --- */
+.landing-menu {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px 14px;
-  justify-content: flex-end;
-  font-size: 0.82rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+  margin-bottom: 16px;
 }
 
-.landing-nav a {
-  text-decoration: none;
-  color: #e5e7eb;
-  letter-spacing: 0.1em;
+.landing-menu a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  opacity: 0.75;
-  transition: opacity 0.18s ease, transform 0.12s ease;
+  text-decoration: none;
+  color: #111827;
+  padding: 1px 0;
 }
 
-.landing-nav a:hover {
-  opacity: 1;
-  transform: translateY(-1px);
+.landing-menu a:hover {
+  color: var(--color-accent);
 }
 
-/* 가운데 세로 카드 (겉싸개 이미지) */
-.landing-main {
+/* --- 겉싸개 이미지 영역 --- */
+.landing-cover-section {
   flex: 1;
   display: flex;
-  align-items: center;
   justify-content: center;
-}
-
-.landing-cover-button {
-  border: none;
-  background: transparent;
-  padding: 0;
-  cursor: pointer;
-  max-width: 360px;
-  width: 100%;
+  align-items: flex-start;
+  margin-top: 4px;
 }
 
 .landing-cover-image {
   display: block;
   width: 100%;
+  max-width: 360px;
   height: auto;
-  border-radius: 0;
-  box-shadow: none;
 }
 
-/* 하단 푸터 */
+/* 푸터는 좌측 정렬 */
 .landing-footer {
-  margin-top: 24px;
-  font-size: 0.74rem;
-  color: #9ca3af;
+  margin-top: 20px;
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
   text-align: left;
+}
+
+/* 모바일에서 화면 안에 다 들어오도록 */
+@media (max-width: 768px) {
+  .landing-page {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .landing-cover-image {
+    max-height: 55vh;      /* 화면의 55% 정도까지만 사용 */
+    object-fit: contain;
+  }
+}
+
+/* 데스크톱에서 약간 더 여유 */
+@media (min-width: 900px) {
+  .landing-page {
+    padding: var(--page-padding-desktop);
+  }
+
+  .landing-cover-image {
+    max-width: 420px;
+    max-height: 70vh;
+  }
 }
 
 /* =========================
