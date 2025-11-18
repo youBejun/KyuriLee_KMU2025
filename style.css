@@ -335,33 +335,31 @@ body {
 
 /* 관상어 / Ornamental Fish 를 두 줄로, 오른쪽 정렬 */
 .landing-title-row {
-  position: relative;
-   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  text-align: right;
-   padding-top: 18px;
+  display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+   text-align: right;
 }
-
-.landing-title-row::before {
-   content: "";
-   position: absolute;
-   top: 0;
-   right: 0;
-   width: 65%;
-   height: 9px;
-   border-radius: 999px;
-   background: #4b5563;
-   opacity: 0.85;
-}
-
 
 .landing-title-main {
+   position: relative;
+   display: inline-block;
   font-family: var(--font-family-title);
-  font-size: 2.2rem;          /* 글씨 크게 */
+  font-size: 2.5rem;          /* 글씨 크게 */
   font-weight: 700;           /* Bold */
   letter-spacing: 0.03em;
   color: #020617;
+}
+
+.landing-title-main::before {
+   content: "";
+   position: absolute;
+   right: 100%;
+   top: 50%;
+   transform: translateY(-50%);
+   width: 260px;
+   height: 2px;
+   background: #111827;
 }
 
 .landing-title-main-en {
