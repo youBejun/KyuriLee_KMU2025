@@ -9,7 +9,6 @@
     content="이규리 작가의 인쇄물 작업 &lt;관상어 Ornamental Fish&gt; 온라인 전시 랜딩 페이지."
   />
 
-  <!-- 폰트 & 스타일 -->
   <link
     rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600&display=swap"
@@ -17,36 +16,34 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="landing">
-    <!-- 상단 타이틀 + 메뉴 -->
-    <header class="landing-header">
-      <div class="landing-title-block">
-        <p class="landing-label">Online Exhibition</p>
-        <h1 class="landing-title-kr">관상어</h1>
-        <p class="landing-title-en">ORNAMENTAL FISH</p>
+  <!-- 다른 페이지와 동일한 흰색 카드 레이아웃 -->
+  <main class="page landing-page">
+    <!-- 상단: 라벨 + 타이틀 한 줄 -->
+    <header class="landing-top">
+      <p class="landing-label">ONLINE EXHIBITION</p>
+      <div class="landing-title-row">
+        <span class="landing-title-main">관상어</span>
+        <span class="landing-title-main-en">Ornamental Fish</span>
       </div>
-
-      <nav class="landing-nav">
-        <a href="intro.html">Intro</a>
-        <a href="chapter1.html">Story</a>
-        <a href="artworks.html">Artworks</a>
-        <a href="photos.html">Photos</a>
-        <a href="figures.html">Figures</a>
-        <a href="exhibition.html">Exhibition</a>
-      </nav>
     </header>
 
-    <!-- 가운데 세로 카드 (겉싸개 이미지) -->
-    <section class="landing-main">
-      <!-- 겉싸개 전체가 클릭 영역 -->
-      <button class="landing-cover-button" onclick="location.href='intro.html'">
-        <!-- 여기 이미지를 겉싸개 디자인으로 교체하면 됨 -->
-        <img
-          src="images/cover-sleeve.jpg"
-          alt="관상어 Ornamental Fish – 겉싸개"
-          class="landing-cover-image"
-        />
-      </button>
+    <!-- 세로로 나열되는 메뉴 -->
+    <nav class="landing-menu">
+      <a href="intro.html">Intro</a>
+      <a href="chapter1.html">Story</a>
+      <a href="artworks.html">Artworks</a>
+      <a href="photos.html">Photos</a>
+      <a href="figures.html">Figures</a>
+      <a href="exhibition.html">Exhibition</a>
+    </nav>
+
+    <!-- 겉싸개 이미지 -->
+    <section class="landing-cover-section">
+      <img
+        src="images/cover-sleeve.jpg"
+        alt="관상어 Ornamental Fish – cover sleeve"
+        class="landing-cover-image"
+      />
     </section>
 
     <footer class="landing-footer">
