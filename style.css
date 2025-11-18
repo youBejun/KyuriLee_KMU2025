@@ -61,7 +61,7 @@ body {
    margin-right: -50vw;
 }
 
-.full-width-container img {
+.full-width-container .landing-cover-image {
    width: 100%;
    height: auto;
    display: block;
