@@ -597,12 +597,29 @@ body {
    GALLERY (Artworks / Photos / Figures / Exhibition)
    ========================= */
 
+/* 여러 장을 세로로 쌓는 기본 레이아웃 */
 .gallery {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 18px;
+  margin-top: 16px;
 }
 
+/* 흰 카드 좌우 여백을 깨고, 이미지가 꽉 차게 나오도록 */
+.gallery--full {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+/* 데스크톱에서 여백이 더 넓으니까 그만큼 더 확장 */
+@media (min-width: 900px) {
+  .gallery--full {
+    margin-left: -40px;
+    margin-right: -40px;
+  }
+}
+
+/* 실제 이미지: 비율 유지 + 가로 100% */
 .gallery--full img {
   display: block;
   width: 100%;
