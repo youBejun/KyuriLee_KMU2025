@@ -10,8 +10,8 @@
   --color-text-soft: #9ca3af;
   --color-accent: #0a84ff;
 
-  --font-family-base: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
-  --font-family-title: "Noto Serif KR", serif;
+  --font-family-base: "MyCustomFont", Pretendard-Light.otf;
+  --font-family-title: "MyCustomFont", Pretendard-SemiBold.otf;
 
   --font-size-base: 16px;
   --font-size-title: 1.7rem;
