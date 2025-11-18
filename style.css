@@ -186,8 +186,8 @@ body {
   display: block;
   width: calc(100% + 36px);
   max-width: none;
-  margin-left: -19px;
-  margin-right: -19px;
+  margin-left: -18px;
+  margin-right: -18px;
   height: auto;
   object-fit: cover;
 }
@@ -197,8 +197,8 @@ body {
   .intro-fullwide,
   .chapter-fullwide {
     width: calc(100% + 80px);
-    margin-left: -41px;
-    margin-right: -41px;
+    margin-left: -40px;
+    margin-right: -40px;
   }
 }
 
@@ -225,8 +225,9 @@ body {
   overflow: visible;
 }
 
+/* 🔧 여기서 width: 100% 제거함 */
 .page-frame img {
-  width: 100%;
+  display: block;
   height: auto;
   border-radius: 0;
   box-shadow: none;
@@ -530,7 +531,7 @@ body {
 .page-home-link-en {
   font-size: 0.8rem;
   margin-left: 6px;
-  color: var(--color-text-muted);
+  color: #var(--color-text-muted);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -559,7 +560,7 @@ body {
 }
 
 /* =========================
-   PAGE TAP ZONE (모바일 + PC 공통, 투명 영역)
+   PAGE TAP ZONE
    ========================= */
 .page-tap-zone {
   position: absolute;
@@ -573,7 +574,6 @@ body {
 .page-tap-zone.left { left: 0; }
 .page-tap-zone.right { right: 0; }
 
-/* 모바일에서도 탭 존 활성화 (기본적으로 block) */
 @media (max-width: 768px) {
   .page-tap-zone {
     display: block;
@@ -604,7 +604,7 @@ body {
 }
 
 /* =========================
-   GALLERY (Artworks / Photos / Figures / Exhibition)
+   GALLERY
    ========================= */
 
 /* 여러 장을 세로로 쌓는 기본 레이아웃 */
@@ -636,7 +636,7 @@ body {
 }
 
 /* =========================
-   CUSTOM FONT (로컬 업로드)
+   CUSTOM FONT
    ========================= */
 @font-face {
   font-family: 'Pretendard';
@@ -660,7 +660,7 @@ body {
 }
 
 /* =========================
-   FONT WEIGHT SYSTEM (Pretendard)
+   FONT WEIGHT SYSTEM
    ========================= */
 
 /* 제목 계열: SemiBold (600) */
