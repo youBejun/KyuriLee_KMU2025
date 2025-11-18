@@ -210,7 +210,7 @@ body {
   /* 화살표만 보이도록, 약간 투명한 검정 */
   font-size: 2rem;
   line-height: 1;
-  color: rgba(0, 0, 0, 0.28);
+  color: rgba(0, 0, 0, 0.10);
 
   cursor: pointer;
   box-shadow: none;
