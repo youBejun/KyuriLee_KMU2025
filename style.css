@@ -432,14 +432,10 @@ https://youbejun.github.io/KyuriLee_KMU2025/
 .page-tap-zone.right { right: 0; }
 
 /* 모바일에서 화살표 숨기고 탭 존 사용 */
-@media (max-width: 768px) {
-  .page-arrow {
-    display: none;
-  }
-
-  .page-tap-zone {
-    display: block;
-  }
+@mdedia (max-width: 768px) {
+   .page-tap-zone{
+      display: block;
+   }
 }
 
 /* 모바일 탭 힌트 */
