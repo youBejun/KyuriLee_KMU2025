@@ -2,14 +2,14 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <title>온라인 전시 – 관상어 Ornamental Fish</title>
+  <title>관상어 Ornamental Fish – Online Exhibition</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="이규리 작가의 인쇄물 작업 &lt;관상어 Ornamental Fish&gt; 온라인 전시."
+    content="이규리 작가의 인쇄물 작업 &lt;관상어 Ornamental Fish&gt; 온라인 전시 랜딩 페이지."
   />
 
-  <!-- 폰트 -->
+  <!-- 폰트 & 스타일 -->
   <link
     rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600&display=swap"
@@ -17,295 +17,41 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="page">
-    <header class="header">
-      <div class="cover-wrapper">
-        <img
-          src="images/cover.jpg"
-          alt="관상어 Ornamental Fish 표지"
-          class="cover-image"
-        />
+  <main class="landing">
+    <!-- 상단 타이틀 + 메뉴 -->
+    <header class="landing-header">
+      <div class="landing-title-block">
+        <p class="landing-label">Online Exhibition</p>
+        <h1 class="landing-title-kr">관상어</h1>
+        <p class="landing-title-en">ORNAMENTAL FISH</p>
       </div>
 
-      <div class="header-text">
-        <h1 class="book-title">
-          관상어
-          <span class="book-title-en">Ornamental Fish</span>
-        </h1>
-        <p class="book-subtitle">너를 품으며 도달하는 애도와 치유에 대하여</p>
-        <p class="book-meta">
-          이규리 | Kyuri Lee<br />
-          2025 · Printed work · Story, Graphic Art
-        </p>
-      </div>
+      <nav class="landing-nav">
+        <a href="intro.html">Intro</a>
+        <a href="chapter1.html">Story</a>
+        <a href="artworks.html">Artworks</a>
+        <a href="photos.html">Photos</a>
+        <a href="figures.html">Figures</a>
+        <a href="exhibition.html">Exhibition</a>
+      </nav>
     </header>
 
-    <!-- 전시 소개 -->
-    <section class="section">
-      <h2 class="section-title">전시 소개</h2>
-
-      <p class="paragraph-compact"><strong>관상어 (Ornamental Fish)</strong></p>
-      <p class="paragraph-compact">
-        이규리 | Kyuri Lee<br />
-        2025<br />
-        인쇄물 | 스토리, 그래픽 아트
-      </p>
-      <p class="paragraph-compact">
-        156 × 250 mm, 128p, 4도 인쇄
-      </p>
-      <p>
-        문학적 내러티브와 그래픽 이미지를 결합한 복합 인쇄 작업.<br />
-        너를 품으며 도달하는 애도와 치유에 대하여.
-      </p>
-
-      <p class="section-divider">—————————————————————————————————</p>
-
-      <p class="paragraph-compact"><strong>Ornamental Fish</strong></p>
-      <p class="paragraph-compact">
-        Kyuri Lee<br />
-        2025<br />
-        Printed work | Story, Graphic Art
-      </p>
-      <p class="paragraph-compact">
-        156 × 250 mm, 128 pages, full-color (4C)
-        printing
-      </p>
-      <p>
-        A hybrid printed work combining literary narrative and graphic imagery.<br />
-        An exploration of grief and healing – through the act of embracing you.
-      </p>
-
-      <p class="section-divider">—————————————————————————————————</p>
-
-      <!-- 기획 의도 -->
-      <h2 class="section-title">기획 의도</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-        imperdiet, odio sed porta malesuada, sem risus placerat lorem, sit amet
-        euismod erat odio a lorem. Suspendisse potenti.
-      </p>
-      <p>
-        Pellentesque habitant morbi tristique senectus et netus et malesuada
-        fames ac turpis egestas. Sed porta, elit at ullamcorper interdum, neque
-        lorem pharetra lacus, ac dictum augue lorem non est.
-      </p>
-      <p>
-        Vivamus eget sollicitudin nisl. Ut in urna vitae orci ultricies aliquet
-        vel quis elit. Maecenas sit amet risus cursus, dapibus elit eu,
-        porttitor nunc.
-      </p>
-
-       <p class="section-divider">—————————————————————————————————</p>
-
-      <!-- 기획 의도 -->
-      <h2 class="section-title">작품 개요</h2>
-      <p>
-        [관상어]는 남월이라는 작은 바닷가 게스트하우스를 배경으로,
-        세 인물-윤, 란주, 낙찬-의 시선이 교차하며 이어지는 서사 작업이다.
-      </p>
-      <p>
-        이 이야기는 사건보다 감정의 흐름에 집중한다.
-        사랑과 결핍, 욕망과 두려움, 그리고 서로를 바라보는 시선 속에서
-        인물들은 계속해서 흔들리고, 그 흔들림 속에서 자신을 다시 정의한다.
-      </p>
-      <p>
-        각 인물의 내면에서 발생하는 미세한 균열의 흔적들을 따라가며,
-        이 작품은 질문한다.
-      </p>
-      <p>
-        "우리는 결국 서로를 사랑할 수 있을까
-        아니면, 끝까지 타인으로 머무르게 될까"
-      </p>
-
+    <!-- 가운데 세로 카드 (겉싸개 이미지) -->
+    <section class="landing-main">
+      <!-- 겉싸개 전체가 클릭 영역 -->
+      <button class="landing-cover-button" onclick="location.href='intro.html'">
+        <!-- 여기 이미지를 겉싸개 디자인으로 교체하면 됨 -->
+        <img
+          src="images/cover-sleeve.jpg"
+          alt="관상어 Ornamental Fish – 겉싸개"
+          class="landing-cover-image"
+        />
+      </button>
     </section>
 
-    <!-- 탭 메뉴 -->
-    <div class="tab-menu">
-      <button class="tab-btn active" data-tab="story">Story</button>
-      <button class="tab-btn" data-tab="artworks">Artworks</button>
-      <button class="tab-btn" data-tab="exhibition">Exhibition</button>
-    </div>
-
-    <!-- 탭 콘텐츠 -->
-    <div class="tab-content">
-      <!-- STORY 탭: 목차 -->
-      <div id="story" class="tab-panel active">
-        <p class="paragraph-compact"><strong>Story · 목차</strong></p>
-        <p class="paragraph-compact">각 장을 클릭하면 해당 챕터로 이동합니다.</p>
-
-        <ol class="toc-list">
-          <li><a href="chapter1.html"> 남월</a></li>
-          <li><a href="chapter2.html"> 윤</a></li>
-          <li><a href="chapter3.html"> 란주</a></li>
-          <li><a href="chapter4.html"> 낙찬</a></li>
-          <li><a href="chapter5.html"> 태양과 물고기</a></li>
-        </ol>
-      </div>
-
-      <!-- ARTWORKS 탭: 규리 작업들 소개용 레이아웃 (임시 lorem) -->
-      <div id="artworks" class="tab-panel">
-        <p class="paragraph-compact">
-          <strong>Artworks · 작업 모음</strong>
-        </p>
-        <p>
-          아래는 실제 작업 이미지가 들어갈 자리입니다. 현재는 레이아웃 확인을
-          위해 샘플 이미지 경로와 Lorem ipsum 텍스트로 구성되어 있습니다.
-        </p>
-
-        <div class="artwork-list">
-          <article class="artwork-item">
-            <div class="artwork-thumb">
-              <!-- 나중에 실제 파일로 교체: images/artworks/artwork01.jpg -->
-              <img
-                src="images/artworks/artwork01.jpg"
-                alt="Artwork 01"
-                onerror="this.classList.add('artwork-thumb-placeholder'); this.removeAttribute('src');"
-              />
-            </div>
-            <div class="artwork-text">
-              <h3 class="artwork-title">Untitled #01</h3>
-              <p class="artwork-meta">2023 · Digital print · 210 × 297 mm</p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                facilisis, nibh in sagittis porttitor, risus nibh cursus enim, et
-                pulvinar sapien eros a ipsum.
-              </p>
-            </div>
-          </article>
-
-          <article class="artwork-item">
-            <div class="artwork-thumb">
-              <img
-                src="images/artworks/artwork02.jpg"
-                alt="Artwork 02"
-                onerror="this.classList.add('artwork-thumb-placeholder'); this.removeAttribute('src');"
-              />
-            </div>
-            <div class="artwork-text">
-              <h3 class="artwork-title">Floating Figure</h3>
-              <p class="artwork-meta">2024 · Mixed media on paper</p>
-              <p>
-                Pellentesque habitant morbi tristique senectus et netus et
-                malesuada fames ac turpis egestas. Sed placerat mi non magna
-                feugiat, at vehicula lectus tempus.
-              </p>
-            </div>
-          </article>
-
-          <article class="artwork-item">
-            <div class="artwork-thumb">
-              <img
-                src="images/artworks/artwork03.jpg"
-                alt="Artwork 03"
-                onerror="this.classList.add('artwork-thumb-placeholder'); this.removeAttribute('src');"
-              />
-            </div>
-            <div class="artwork-text">
-              <h3 class="artwork-title">Ornamental Study</h3>
-              <p class="artwork-meta">2024 · Risograph zine · 16p</p>
-              <p>
-                Vivamus a urna at est fermentum fermentum. Praesent id ex ac
-                magna volutpat sodales. Sed pharetra posuere mi, sit amet
-                malesuada ipsum porta sit amet.
-              </p>
-            </div>
-          </article>
-        </div>
-      </div>
-
-      <!-- EXHIBITION 탭: 전시장 스냅샷/진행 사진 레이아웃 (임시 lorem) -->
-      <div id="exhibition" class="tab-panel">
-        <p class="paragraph-compact">
-          <strong>Exhibition · 전시 기록</strong>
-        </p>
-        <p>
-          전시가 시작되면 설치 전경, 디테일 컷, 관객 뷰 등의 사진을 이곳에
-          순서대로 추가할 수 있습니다.
-        </p>
-
-        <div class="exhibition-list">
-          <article class="exhibition-item">
-            <div class="exhibition-thumb">
-              <img
-                src="images/exhibition/exhibition01.jpg"
-                alt="Exhibition view 01"
-                onerror="this.classList.add('exhibition-thumb-placeholder'); this.removeAttribute('src');"
-              />
-            </div>
-            <div class="exhibition-text">
-              <h3 class="exhibition-title">Installation View · Entrance</h3>
-              <p class="exhibition-meta">Gallery Lorem · 2025</p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                ultrices, odio non consectetur rutrum, sem massa tempus dui, id
-                luctus odio ipsum a justo.
-              </p>
-            </div>
-          </article>
-
-          <article class="exhibition-item">
-            <div class="exhibition-thumb">
-              <img
-                src="images/exhibition/exhibition02.jpg"
-                alt="Exhibition view 02"
-                onerror="this.classList.add('exhibition-thumb-placeholder'); this.removeAttribute('src');"
-              />
-            </div>
-            <div class="exhibition-text">
-              <h3 class="exhibition-title">Reading Corner</h3>
-              <p class="exhibition-meta">Installation detail</p>
-              <p>
-                Pellentesque non leo vitae risus tincidunt dictum. Maecenas nec
-                fringilla sapien. Integer feugiat, mi sed sodales dignissim,
-                justo diam facilisis arcu, in cursus mauris urna sed elit.
-              </p>
-            </div>
-          </article>
-
-          <article class="exhibition-item">
-            <div class="exhibition-thumb">
-              <img
-                src="images/exhibition/exhibition03.jpg"
-                alt="Exhibition view 03"
-                onerror="this.classList.add('exhibition-thumb-placeholder'); this.removeAttribute('src');"
-              />
-            </div>
-            <div class="exhibition-text">
-              <h3 class="exhibition-title">Closing Day</h3>
-              <p class="exhibition-meta">Audience & atmosphere</p>
-              <p>
-                Nam vel dui vitae metus bibendum viverra. Integer id viverra
-                magna. Aenean porta fermentum nibh, vitae convallis sem
-                fermentum ac.
-              </p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </div>
-
-    <footer class="footer">
-      <p>© 2025 Kyuri Lee. All rights reserved.</p>
+    <footer class="landing-footer">
+      <p>© 2025 Kyuri Lee. Online exhibition · Ornamental Fish</p>
     </footer>
   </main>
-
-  <!-- 탭 전환 스크립트 -->
-  <script>
-    const tabButtons = document.querySelectorAll(".tab-btn");
-    const tabPanels = document.querySelectorAll(".tab-panel");
-
-    tabButtons.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const target = btn.dataset.tab;
-
-        tabButtons.forEach((b) => b.classList.remove("active"));
-        btn.classList.add("active");
-
-        tabPanels.forEach((panel) =>
-          panel.classList.toggle("active", panel.id === target)
-        );
-      });
-    });
-  </script>
 </body>
 </html>
