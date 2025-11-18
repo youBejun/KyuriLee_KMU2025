@@ -187,7 +187,66 @@ body {
   box-shadow: none;
 }
 
-https://youbejun.github.io/KyuriLee_KMU2025/
+/* =========================
+   PAGE ARROWS — 이미지 좌/우 중앙, 배경은 투명
+   ========================= */
+.page-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  /* 클릭 영역은 넓게, 하지만 보이지 않게 */
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  border-radius: 999px; /* 실제 히트 영역만 동그라미 */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* 화살표만 보이도록, 약간 투명한 검정 */
+  font-size: 2rem;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.28);
+
+  cursor: pointer;
+  box-shadow: none;
+  outline: none;
+
+  z-index: 2; /* 탭 존보다 위에 */
+  transition:
+    color 0.15s ease,
+    transform 0.08s ease,
+    opacity 0.15s ease;
+}
+
+/* 좌우 위치 */
+.page-arrow.left  { left: 8px; }
+.page-arrow.right { right: 8px; }
+
+/* Hover (PC) */
+.page-arrow:hover {
+  color: rgba(0, 0, 0, 0.55);
+  transform: translateY(-50%) scale(1.03);
+}
+
+/* 모바일 탭 느낌 */
+@media (hover: none) {
+  .page-arrow:active {
+    color: rgba(0, 0, 0, 0.55);
+    transform: translateY(-50%) scale(0.97);
+  }
+}
+
+/* disabled 상태는 거의 안 보이게 */
+.page-arrow:disabled {
+  opacity: 0.12;
+  cursor: default;
+}
+
 /* =========================
    BOTTOM NAV (소개 / 목차 / 첫 화면)
    ========================= */
@@ -236,7 +295,6 @@ https://youbejun.github.io/KyuriLee_KMU2025/
 .nav-btn.ghost {
   background: #ffffff;
 }
-
 
 /* =========================
    FOOTER
@@ -334,12 +392,12 @@ https://youbejun.github.io/KyuriLee_KMU2025/
 
 .landing-cover-image {
   display: block;
-  width: 100%;
-  max-width: auto;
-  height: none;
+  width: 100%;      /* 흰 카드 안에서 가로 꽉 차게 */
+  height: auto;
+  max-width: none;
 }
 
-/* 푸터는 좌측 정렬 */
+/* 랜딩 푸터 */
 .landing-footer {
   margin-top: 20px;
   font-size: 0.78rem;
@@ -429,7 +487,7 @@ https://youbejun.github.io/KyuriLee_KMU2025/
 }
 
 /* =========================
-   PAGE TAP ZONE (모바일)
+   PAGE TAP ZONE (모바일 + PC 공통, 투명 영역)
    ========================= */
 .page-tap-zone {
   position: absolute;
@@ -437,16 +495,17 @@ https://youbejun.github.io/KyuriLee_KMU2025/
   bottom: 0;
   width: 50%;
   background: transparent;
+  z-index: 1;
 }
 
 .page-tap-zone.left { left: 0; }
 .page-tap-zone.right { right: 0; }
 
-/* 모바일에서 화살표 숨기고 탭 존 사용 */
-@mdedia (max-width: 768px) {
-   .page-tap-zone{
-      display: block;
-   }
+/* 모바일에서도 탭 존 활성화 (기본적으로 block) */
+@media (max-width: 768px) {
+  .page-tap-zone {
+    display: block;
+  }
 }
 
 /* 모바일 탭 힌트 */
@@ -526,9 +585,8 @@ https://youbejun.github.io/KyuriLee_KMU2025/
     max-width: 380px;
   }
 
-   /* 상단 우측 메뉴 숨기기 */
-   .page-header-nav {
-     display: none;
-   }
-
+  /* 상단 우측 메뉴 숨기기 (혹시 몰라 한 번 더) */
+  .page-header-nav {
+    display: none;
+  }
 }
