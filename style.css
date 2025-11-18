@@ -521,4 +521,10 @@ body {
   .landing-cover-button {
     max-width: 380px;
   }
+
+   /* 상단 우측 메뉴 숨기기 */
+   .page-header-nav {
+     display: none;
+   }
+
 }
