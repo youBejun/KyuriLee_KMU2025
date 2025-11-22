@@ -40,10 +40,19 @@
 
 
     <section class="landing-cover-section">
-      <video class="landing-cover-image" autoplay muted playsinline>
-        <source src="images/cover-sleeve.mp4" type="video/mp4" />
-      </video>
-    </section>
+  <video
+    class="landing-cover-image"
+    autoplay
+    muted
+    playsinline
+    webkit-playsinline
+    poster="images/cover-sleeve.jpg"
+  >
+    <source src="images/cover-sleeve.mp4" type="video/mp4" />
+    <!-- 완전 폴백용 (영상이 아예 안 되는 경우) -->
+    <img src="images/cover-sleeve.jpg" alt="관상어 Ornamental Fish cover" />
+  </video>
+</section>
     
 
      <!-- 전시 소개 -->
